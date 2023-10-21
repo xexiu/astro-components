@@ -13,7 +13,6 @@
   "scripts": {
     "publish": "bun lerna publish",
     "publish:force": "bun lerna publish --force-publish '*'",
-    "version": "bun lerna version --conventional-commits",
     "release": "bun lerna publish from-git"
   },
   "devDependencies": {
