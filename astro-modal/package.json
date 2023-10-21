@@ -14,7 +14,6 @@
     "index.ts",
     "src/*"
   ],
-  "gitHead": "2ee3bc5062cfc3c19efabf0dea5754eba796e1fa",
   "homepage": "https://xexiu.dev",
   "keywords": [
     "astro",
@@ -32,7 +31,7 @@
   "repository": {
     "directory": "astro-modal",
     "type": "git",
-    "url": "https://github.com/xexiu/astro-components/tree/master/astro-modal"
+    "url": "https://github.com/xexiu/astro-components"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
@@ -40,5 +39,5 @@
   },
   "type": "module",
   "typings": "src/modal.d.ts",
-  "version": "0.1.6"
+  "version": "0.1.8"
 }

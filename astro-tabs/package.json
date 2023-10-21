@@ -14,30 +14,33 @@
     "index.ts",
     "src/*"
   ],
-  "gitHead": "2ee3bc5062cfc3c19efabf0dea5754eba796e1fa",
   "homepage": "https://xexiu.dev",
   "keywords": [
     "astro",
     "astro-component",
     "tabs",
     "tab",
-    "optimization"
+    "optimization",
+    "ui",
+    "html",
+    "css",
+    "no-js"
   ],
   "license": "ISC",
   "main": "index.ts",
-  "name": "astro-tabs",
+  "name": "@xexiu/astro-tabs",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "directory": "astro-tabs",
     "type": "git",
-    "url": "https://github.com/xexiu/astro-components/tree/master/astro-tabs"
+    "url": "https://github.com/xexiu/astro-components"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "tsc": "tsc"
   },
   "type": "module",
-  "version": "0.1.6"
+  "version": "0.1.5"
 }
