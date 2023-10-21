@@ -40,5 +40,5 @@
   },
   "type": "module",
   "typings": "src/modal.d.ts",
-  "version": "0.1.9"
+  "version": "0.2.3"
 }
