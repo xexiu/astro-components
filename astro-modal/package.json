@@ -1,0 +1,27 @@
+{
+  "author": "Xexiu <sergiu.mironescu@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/xexiu/astro-components/issues"
+  },
+  "description": "A pure css and html modal component for Astro",
+  "directories": {
+    "test": "__tests__"
+  },
+  "homepage": "https://xexiu.dev",
+  "license": "ISC",
+  "main": "src/Modal.astro",
+  "name": "astro-modal",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xexiu/astro-components.git"
+  },
+  "scripts": {
+    "test": "bun ./__tests__/astro-modal.test.js",
+    "tsc": "tsc"
+  },
+  "typings": "src/modal.d.ts",
+  "version": "0.0.0"
+}

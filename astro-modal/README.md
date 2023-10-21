@@ -1,3 +1,11 @@
-# Astro Modal PURE CSS and HTML
+# `astro-modal`
 
-Independent astro components
+> TODO: description
+
+## Usage
+
+```
+const astroModal = require('astro-modal');
+
+// TODO: DEMONSTRATE API
+```

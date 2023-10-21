@@ -1,0 +1,58 @@
+---
+import { Props } from './modal';
+import './modal-styles.css';
+
+const {
+   id,
+   classes,
+   ariaLabel,
+   modalBtnClass,
+   headerClass,
+   sectionClass,
+   footerClass,
+   closeBtnClass
+}: Props = Astro.props;
+
+function isPlainString(input: string): boolean {
+   const pattern = /^[a-zA-Z0-9\s]*$/;
+
+   return pattern.test(input);
+}
+
+if (!isPlainString(id)) {
+   throw new Error('Invalid Props: id must be a plain string.');
+}
+---
+
+<button
+   onclick={`window.${id}.showModal()`}
+   class:list={['btn-modal', modalBtnClass]}><slot name="open-modal" /></button
+>
+
+<dialog
+   id={id}
+   class="dialog-container"
+   class:list={classes}
+   aria-label={ariaLabel}
+   role="dialog"
+>
+   <header class="modal-header" class:list={headerClass}>
+      <slot name="modal-title" />
+   </header>
+   <section class="modal-section" class:list={sectionClass}>
+      <slot name="modal-main" />
+   </section>
+   <footer class="modal-footer" class:list={footerClass}>
+      <slot name="modal-footer" />
+   </footer>
+   <form method="dialog">
+      <slot name="modal-close-button" />
+      <button class="close-btn-modal" class:list={closeBtnClass} aria-label="Cerrar Modal">
+         <img
+            src="/assets/icons-svg/icon-close.svg"
+            alt="Cerrar Modal Icono"
+            class="close-modal-icon"
+         />
+      </button>
+   </form>
+</dialog>

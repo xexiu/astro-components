@@ -1,0 +1,70 @@
+html:has(dialog[open]) body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    inset: 0;
+  }
+
+  @keyframes fade-opacity-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  dialog {
+    border: 0;
+    opacity: 0;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    overflow-y: auto;
+  }
+  dialog::backdrop {
+    position: fixed;
+      inset: 0;
+      background: rgb(0 0 0 / 90%);
+  }
+
+  dialog[open] {
+    transition: opacity 1s;
+    animation: fade-opacity-in 1s forwards;
+    cursor: auto;
+  }
+
+  .dialog-container {
+    position: relative;
+    padding: 15px;
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .close-btn-modal {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+
+  .close-modal-icon {
+    height: 25px;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
