@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/xexiu/astro-components/compare/@xexiu/astro-tabs@0.1.7...@xexiu/astro-tabs@0.1.8) (2023-10-21)
+
+**Note:** Version bump only for package @xexiu/astro-tabs
+
+
+
+
+
 ## [0.1.7](https://github.com/xexiu/astro-components/compare/@xexiu/astro-tabs@0.1.6...@xexiu/astro-tabs@0.1.7) (2023-10-21)
 
 **Note:** Version bump only for package @xexiu/astro-tabs
