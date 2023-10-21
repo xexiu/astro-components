@@ -7,19 +7,23 @@
   "directories": {
     "test": "__tests__"
   },
+  "files": [
+    "index.ts"
+  ],
   "homepage": "https://xexiu.dev",
   "license": "ISC",
-  "main": "src/Modal.astro",
+  "main": "src/index.ts",
   "name": "astro-modal",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
+    "directory": "astro-modal",
     "type": "git",
     "url": "git+https://github.com/xexiu/astro-components.git"
   },
   "scripts": {
-    "test": "bun ./__tests__/astro-modal.test.js",
+    "test": "echo \"Error: run tests from root\" && exit 1",
     "tsc": "tsc"
   },
   "typings": "src/modal.d.ts",

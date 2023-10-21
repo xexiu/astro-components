@@ -1,5 +1,17 @@
 {
+  "lib": [
+    "dom",
+    "dom.iterable",
+    "esnext"
+  ],
+  "allowJs": true,
     "compilerOptions": {
+      "plugins": [
+        {
+          "name": "@astrojs/ts-plugin"
+        },
+      ],
+      "jsx": "react-jsx",
       "module": "commonjs",
       "declaration": true,
       "noImplicitAny": false,

@@ -5,9 +5,9 @@
     "*"
   ],
   "scripts": {
-    "publish": "lerna publish"
+    "publish": "lerna run tsc && lerna publish"
   },
-  "dependencies": {},
+  "dependencies": { "@astrojs/ts-plugin": "^1.2.0" },
   "devDependencies": {
     "lerna": "^7.4.1"
   }
