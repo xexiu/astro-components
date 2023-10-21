@@ -14,7 +14,7 @@
     "index.ts",
     "src/*"
   ],
-  "gitHead": "c0632707a596579b73b6416a172ba53ddf4a022e",
+  "gitHead": "a5aedd62346c0e9fa116039531e7054f06f4849f",
   "homepage": "https://xexiu.dev",
   "keywords": [
     "astro",
@@ -32,12 +32,12 @@
   "repository": {
     "directory": "astro-tabs",
     "type": "git",
-    "url": "git+https://github.com/xexiu/astro-components.git"
+    "url": "https://github.com/xexiu/astro-components/tree/master/astro-tabs"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "tsc": "tsc"
   },
   "type": "module",
-  "version": "0.1.4"
+  "version": "0.1.5"
 }
