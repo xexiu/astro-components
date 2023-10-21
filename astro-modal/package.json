@@ -4,13 +4,17 @@
     "url": "https://github.com/xexiu/astro-components/issues"
   },
   "description": "A pure css and html modal component for Astro",
-  "directories": {
-    "test": "__tests__"
-  },
   "files": [
     "index.ts"
   ],
   "homepage": "https://xexiu.dev",
+  "keywords": [
+    "astro",
+    "astro-component",
+    "modal",
+    "dialog",
+    "optimization"
+  ],
   "license": "ISC",
   "main": "src/index.ts",
   "name": "astro-modal",
@@ -26,6 +30,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1",
     "tsc": "tsc"
   },
+  "type": "module",
   "typings": "src/modal.d.ts",
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
