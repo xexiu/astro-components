@@ -19,6 +19,11 @@ jobs:
       with:
         node-version: '16'
 
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: latest
+
     - name: "Setup npm"
       run: |
         npm set @xexiu:registry=https://npm.pkg.github.com/xexiu
