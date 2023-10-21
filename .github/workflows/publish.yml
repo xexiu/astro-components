@@ -36,9 +36,7 @@ jobs:
         git config user.email "${{ github.actor}}@users.noreply.github.com"
 
         if [ ${{ github.base_ref }} = development ]; then
-          bunx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
+          bunx lerna publish --conventional-commits --conventional-prerelease --preid beta --yes
         else
-          bunx lerna version --conventional-commits --conventional-graduate --yes
+          bunx lerna publish --conventional-commits --conventional-graduate --yes
         fi
-
-        bunx lerna publish from-git --yes
