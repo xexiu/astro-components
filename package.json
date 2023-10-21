@@ -8,7 +8,7 @@
     "directory": ""
   },
   "workspaces": [
-    "*"
+    "./*"
   ],
   "scripts": {
     "publish": "bun lerna publish",

@@ -13,7 +13,6 @@
    visibility: visible;
    display: inline-block;
    opacity: 1;
-   color: $i;
 }
 
 .tabs-nav {
@@ -48,13 +47,13 @@
 
 /* ##### TITLE STYLE #### */
 
-/* .tab-wrapper:has(.radio-tab:checked) {
-   box-shadow: var(--shadow-md);
+.tab-wrapper:has(.radio-tab:checked) {
+   box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
    text-shadow: 0 2px 3px rgb(255 255 255 / 40%);
    &:hover {
-      box-shadow: var(--shadow-md);
+      box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
    }
-} */
+}
 
 .tab-wrapper {
    display: flex;
