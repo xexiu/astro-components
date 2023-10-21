@@ -7,6 +7,9 @@
     "url": "https://github.com/xexiu/astro-components/issues"
   },
   "description": "A pure css and html modal component for Astro",
+  "exports": {
+    ".": "./index.js"
+  },
   "files": [
     "index.js",
     "Modal.astro"
@@ -20,6 +23,7 @@
     "optimization"
   ],
   "license": "ISC",
+  "main": "index.js",
   "name": "astro-modal",
   "publishConfig": {
     "access": "public"
@@ -35,5 +39,5 @@
   },
   "type": "module",
   "typings": "src/modal.d.ts",
-  "version": "0.0.7"
+  "version": "0.0.8"
 }
