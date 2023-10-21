@@ -1,0 +1,20 @@
+name: on release
+
+on:
+    release:
+        types: [created]
+
+jobs:
+    publish-github-registry:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+                  registry-url: https://npm.pkg.github.com/
+            - run: yarn install
+            - run: yarn build
+            - run: yarn publish
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

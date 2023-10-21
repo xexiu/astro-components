@@ -1,12 +1,10 @@
 {
   "name": "root",
   "private": true,
+  "type": "module",
   "workspaces": [
     "*"
   ],
-  "scripts": {
-    "publish": "lerna run tsc && lerna publish"
-  },
   "dependencies": { "@astrojs/ts-plugin": "^1.2.0" },
   "devDependencies": {
     "lerna": "^7.4.1"
