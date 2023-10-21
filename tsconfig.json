@@ -6,6 +6,7 @@
   ],
   "allowJs": true,
   "compilerOptions": {
+    "jsx": "react-jsx",
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"

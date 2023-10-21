@@ -13,12 +13,17 @@
   "scripts": {
     "publish": "bun lerna publish",
     "publish:force": "bun lerna publish --force-publish '*'",
-    "release": "bun lerna publish from-git"
+    "release": "bun lerna publish from-git",
+    "lint:fix": "bun run eslint --fix --ext .js,.jsx,.ts,.astro .",
+    "test": "echo \"Skipping: no pre-commit test specified\" && exit 0"
   },
   "devDependencies": {
     "lerna": "^7.4.1",
     "bun": "1.0.7",
-    "@astrojs/ts-plugin": "^1.2.0"
+    "@astrojs/ts-plugin": "^1.2.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.52.0",
+    "eslint-plugin-astro": "^0.29.1"
   },
   "description": "Independent astro components made with love. Pure HTML, CSS, No Javascript (moslty) ;)",
   "version": "1.0.0",

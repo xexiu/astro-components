@@ -1,5 +1,5 @@
-import Modal from './src/Modal.astro'
+import Modal from './src/Modal.astro';
 
 export {
-    Modal as default
-}
+   Modal as default
+};

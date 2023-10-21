@@ -1,0 +1,158 @@
+{
+    "root": true,
+    "extends": [
+      "plugin:astro/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      }
+    }
+  ],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2020,
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true,
+        "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "ignorePatterns": [
+      "*.md"
+    ],
+    "rules": {
+      "eol-last": ["error", "always"],
+      "comma-style": [
+        "error",
+        "last"
+      ],
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "max-len": [
+        "error",
+        {
+          "code": 160
+        }
+      ],
+      "padding-line-between-statements": [
+        "error",
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "block"
+        },
+        {
+          "blankLine": "always",
+          "prev": "block",
+          "next": "*"
+        },
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "block-like"
+        },
+        {
+          "blankLine": "always",
+          "prev": "block-like",
+          "next": "*"
+        },
+        {
+          "blankLine": "always",
+          "prev": "export",
+          "next": "block"
+        },
+        {
+          "blankLine": "always",
+          "prev": "import",
+          "next": "block"
+        },
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "return"
+        }
+      ],
+      "prefer-const": [
+        "error",
+        {
+          "destructuring": "any",
+          "ignoreReadBeforeAssign": false
+        }
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "space-infix-ops": [
+        "error",
+        {
+          "int32Hint": true
+        }
+      ],
+      "space-before-blocks": "error",
+      "arrow-spacing": "error",
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "never",
+          "named": "never",
+          "asyncArrow": "always"
+        }
+      ],
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "no-dupe-keys": 0,
+      "semi": [
+        "error",
+        "always"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "indent": [
+        "error",
+        3
+      ],
+      "object-shorthand": [
+        "error",
+        "properties"
+      ],
+      "no-param-reassign": "warn",
+      "spaced-comment": "off",
+      "no-console": "warn",
+      "consistent-return": "off",
+      "func-names": "off",
+      "no-process-exit": "off",
+      "no-return-await": "off",
+      "no-underscore-dangle": "off",
+      "class-methods-use-this": "off",
+      "prefer-destructuring": [
+        "error",
+        {
+          "object": true,
+          "array": false
+        }
+      ],
+      "no-unused-vars": [
+        "error",
+        {
+          "ignoreRestSiblings": true
+        }
+      ]
+    }
+  }

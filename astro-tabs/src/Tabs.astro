@@ -1,6 +1,6 @@
 ---
-import TabTitle from "./TabTitle.astro";
-import "./tabs-styles.css";
+import TabTitle from './TabTitle.astro';
+import './tabs-styles.css';
 
 interface Props {
    tabTitles: string[];
@@ -15,16 +15,16 @@ interface Props {
 const {
    tabTitles,
    keys,
-   classes = "",
-   tabsNavClass,
+   classes = '',
+   tabsNavClass = '',
    panelsContainerClass,
    panelClass,
-   tabTitleClasses,
+   tabTitleClasses
 } = Astro.props;
 ---
 
 <div class:list={[`tabs-container tabs ${classes}`]}>
-   <nav class="tabs-nav" class:list={tabsNavClass}>
+   <nav class:list={['tabs-nav', tabsNavClass]}>
       {
          tabTitles.map((tabTitle: string, index: number) => (
             <TabTitle
@@ -37,12 +37,12 @@ const {
       }
    </nav>
 
-   <div class="panels-container" class:list={panelsContainerClass}>
+   <div class:list={['panels-container', panelsContainerClass]}>
       {
          keys.map(async (key: string, index: number) => {
             return (
                <div class:list={['panel', `panel-${index}`, panelClass]}>
-                  <Fragment set:html={Astro.slots.render("default", [key])} />
+                  <Fragment set:html={Astro.slots.render('default', [key])} />
                </div>
             );
          })
