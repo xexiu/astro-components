@@ -6,10 +6,10 @@ interface Props {
    tabTitleClasses?: string;
 }
 
-const { tabTitle, index, firstChecked = false, tabTitleClasses } = Astro.props;
+const { tabTitle, index, firstChecked = false, tabTitleClasses = '' } = Astro.props;
 ---
 
-<div class={`tab-wrapper tab-${index} btn-blue`} class:list={tabTitleClasses}>
+<div class:list={['tab-wrapper', `tab-${index}`, 'btn-blue', tabTitleClasses]}>
    {
       firstChecked ? (
          <input
