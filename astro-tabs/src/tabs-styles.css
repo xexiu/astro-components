@@ -1,0 +1,47 @@
+
+.tabs-container:has(.radio-tab-0:checked) .panel-0,
+.tabs-container:has(.radio-tab-1:checked) .panel-1,
+.tabs-container:has(.radio-tab-2:checked) .panel-2,
+.tabs-container:has(.radio-tab-3:checked) .panel-3,
+.tabs-container:has(.radio-tab-4:checked) .panel-4,
+.tabs-container:has(.radio-tab-5:checked) .panel-5,
+.tabs-container:has(.radio-tab-6:checked) .panel-6,
+.tabs-container:has(.radio-tab-7:checked) .panel-7,
+.tabs-container:has(.radio-tab-8:checked) .panel-8,
+.tabs-container:has(.radio-tab-9:checked) .panel-9,
+.tabs-container:has(.radio-tab-10:checked) .panel-10 {
+   visibility: visible;
+   display: inline-block;
+   opacity: 1;
+   color: $i;
+}
+
+.tabs-nav {
+   display: flex;
+   gap: 10px;
+   margin-bottom: 20px;
+   justify-content: center;
+}
+
+.panels-container {
+   position: relative;
+}
+
+.panel {
+   display: none;
+   width: 100%;
+   opacity: 0;
+   visibility: hidden;
+}
+
+.tab-label {
+   display: block;
+   cursor: pointer;
+}
+
+.radio-tab {
+   width: 0;
+   height: 0;
+   margin: 0;
+   opacity: 0;
+}

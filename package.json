@@ -5,6 +5,9 @@
   "workspaces": [
     "*"
   ],
+  "scripts": {
+    "publish": "lerna publish"
+  },
   "dependencies": { "@astrojs/ts-plugin": "^1.2.0" },
   "devDependencies": {
     "lerna": "^7.4.1"

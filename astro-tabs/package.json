@@ -1,0 +1,42 @@
+{
+  "author": {
+    "name": "Sergiu Mironescu <sergiu.mironescu@gmail.com>",
+    "url": "https://twitter.com/xexiudev"
+  },
+  "bugs": {
+    "url": "https://github.com/xexiu/astro-components/issues"
+  },
+  "description": "A pure css and html tabs component for Astro",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "src/*"
+  ],
+  "homepage": "https://xexiu.dev",
+  "keywords": [
+    "astro",
+    "astro-component",
+    "tabs",
+    "tab",
+    "optimization"
+  ],
+  "license": "ISC",
+  "main": "index.ts",
+  "name": "astro-tabs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "astro-tabs",
+    "type": "git",
+    "url": "git+https://github.com/xexiu/astro-components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "tsc": "tsc"
+  },
+  "type": "module",
+  "version": "0.1.2"
+}

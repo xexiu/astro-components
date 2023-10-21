@@ -1,0 +1,51 @@
+---
+import TabTitle from "./TabTitle.astro";
+import "./tabs-styles.css";
+
+interface Props {
+   tabTitles: string[];
+   keys: string[];
+   classes?: string;
+   tabsNavClass?: string;
+   panelsContainerClass?: string;
+   panelClass?: string;
+   tabTitleClasses?: string;
+}
+
+const {
+   tabTitles,
+   keys,
+   classes = "",
+   tabsNavClass,
+   panelsContainerClass,
+   panelClass,
+   tabTitleClasses,
+} = Astro.props;
+---
+
+<div class:list={[`tabs-container tabs ${classes}`]}>
+   <nav class="tabs-nav" class:list={tabsNavClass}>
+      {
+         tabTitles.map((tabTitle: string, index: number) => (
+            <TabTitle
+               {tabTitleClasses}
+               {tabTitle}
+               {index}
+               firstChecked={index === 0}
+            />
+         ))
+      }
+   </nav>
+
+   <div class="panels-container" class:list={panelsContainerClass}>
+      {
+         keys.map(async (key: string, index: number) => {
+            return (
+               <div class={`panel panel-${index}`} class:list={panelClass}>
+                  <Fragment set:html={Astro.slots.render("default", [key])} />
+               </div>
+            );
+         })
+      }
+   </div>
+</div>

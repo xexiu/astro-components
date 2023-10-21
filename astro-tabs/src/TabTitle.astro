@@ -1,0 +1,63 @@
+---
+interface Props {
+   tabTitle: string,
+   index: number;
+   firstChecked?: boolean;
+   tabTitleClasses?: string;
+}
+
+const { tabTitle, index, firstChecked = false, tabTitleClasses } = Astro.props;
+---
+
+<div class={`tab-wrapper tab-${index} btn-blue`} class:list={tabTitleClasses}>
+   {
+      firstChecked ? (
+         <input
+            class={`radio-tab radio-tab-${index}`}
+            type="radio"
+            checked
+            name="radio-tab-input"
+            id={`radio-tab-input-${index}`}
+         />
+      ) : (
+         <input
+            class={`radio-tab radio-tab-${index}`}
+            type="radio"
+            name="radio-tab-input"
+            id={`radio-tab-input-${index}`}
+         />
+      )
+   }
+   <label class="tab tab-label" for={`radio-tab-input-${index}`}>
+      {tabTitle}
+   </label>
+</div>
+
+<style>
+   .tab-wrapper:has(.radio-tab:checked) {
+      box-shadow: var(--shadow-md);
+      text-shadow: 0 2px 3px rgb(255 255 255 / 40%);
+      &:hover {
+         box-shadow: var(--shadow-md);
+      }
+   }
+
+   .tab-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 0;
+   }
+
+   .tab-label {
+      display: block;
+      cursor: pointer;
+      padding: 5px 15px;
+   }
+
+   .radio-tab {
+      width: 0;
+      height: 0;
+      margin: 0;
+      opacity: 0;
+   }
+</style>
