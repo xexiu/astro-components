@@ -41,7 +41,7 @@ const {
       {
          keys.map(async (key: string, index: number) => {
             return (
-               <div class={`panel panel-${index}`} class:list={panelClass}>
+               <div class:list={['panel', `panel-${index}`, panelClass]}>
                   <Fragment set:html={Astro.slots.render("default", [key])} />
                </div>
             );
