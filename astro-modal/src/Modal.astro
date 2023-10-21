@@ -6,11 +6,11 @@ const {
    id,
    classes,
    ariaLabel,
-   modalBtnClass,
-   headerClass,
-   sectionClass,
-   footerClass,
-   closeBtnClass
+   modalBtnClass = '',
+   headerClass = '',
+   sectionClass = '',
+   footerClass = '',
+   closeBtnClass = ''
 }: Props = Astro.props;
 
 function isPlainString(input: string): boolean {

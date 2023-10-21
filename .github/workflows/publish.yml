@@ -36,7 +36,7 @@ jobs:
         git config user.email "${{ github.actor}}@users.noreply.github.com"
 
         if [ ${{ github.base_ref }} = development ]; then
-          bunx lerna publish --conventional-commits --conventional-prerelease --preid beta --yes
+          bunx lerna publish --conventional-commits --conventional-prerelease --preid beta --yes --message 'chore: release new beta version'
         else
-          bunx lerna publish --conventional-commits --conventional-graduate --yes
+          bunx lerna publish --conventional-commits --conventional-graduate --yes --message 'chore: release new stable version'
         fi
