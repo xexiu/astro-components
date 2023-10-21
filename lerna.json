@@ -1,9 +1,9 @@
 {
-    "$schema": "node_modules/lerna/schemas/lerna-schema.json",
-    "command": {
-        "publish": {
-            "conventionalCommits": true
-        }
-    },
-    "version": "0.0.10"
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "command": {
+    "publish": {
+      "conventionalCommits": true
+    }
+  },
+  "version": "0.1.3"
 }
