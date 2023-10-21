@@ -5,7 +5,8 @@
   },
   "description": "A pure css and html modal component for Astro",
   "files": [
-    "index.ts"
+    "index.ts",
+    "Modal.astro"
   ],
   "homepage": "https://xexiu.dev",
   "keywords": [
@@ -32,5 +33,5 @@
   },
   "type": "module",
   "typings": "src/modal.d.ts",
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
