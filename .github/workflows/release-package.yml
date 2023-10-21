@@ -13,7 +13,7 @@ jobs:
               with:
                   node-version: 16
                   registry-url: https://npm.pkg.github.com/
-            - run: bun install
-            - run: bun lerna publish
+            - run: bunx install
+            - run: bunx lerna publish
               env:
                   NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

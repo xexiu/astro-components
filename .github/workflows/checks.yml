@@ -26,8 +26,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        bun install
-        bun lerna bootstrap
+        bunx install
+        bunx lerna bootstrap
 
     - name: Run tests # Run tests of all packages
-      run: npx lerna exec npm run test
+      run: bunx lerna exec bun run test

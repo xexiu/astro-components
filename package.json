@@ -14,7 +14,8 @@
     "publish": "bun lerna publish",
     "publish:force": "bun lerna publish --force-publish '*'",
     "release": "bun lerna publish from-git",
-    "lint:fix": "bun run eslint --fix --ext .js,.jsx,.ts,.astro ."
+    "lint:fix": "bun run eslint --fix --ext .js,.jsx,.ts,.astro .",
+    "test": "echo \"Skipping: no pre-commit test specified\" && exit 0"
   },
   "devDependencies": {
     "lerna": "^7.4.1",
