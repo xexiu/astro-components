@@ -31,8 +31,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        bunx install
-        bunx lerna bootstrap
+        bun install
+        bun lerna bootstrap
 
     - name: Run tests # Run tests of all packages
-      run: bunx lerna exec bun run test
+      run: bun lerna exec bun run test
