@@ -1,12 +1,17 @@
 ---
 interface Props {
-   tabTitle: string,
+   tabTitle: string;
    index: number;
    firstChecked?: boolean;
    tabTitleClasses?: string;
 }
 
-const { tabTitle, index, firstChecked = false, tabTitleClasses = '' } = Astro.props;
+const {
+   tabTitle,
+   index,
+   firstChecked = false,
+   tabTitleClasses = ''
+} = Astro.props;
 ---
 
 <div class:list={['tab-wrapper', `tab-${index}`, 'btn-blue', tabTitleClasses]}>
