@@ -1,11 +1,31 @@
 {
-  "name": "root",
+  "name": "@xexiu/root",
   "private": true,
-  "scripts": {
-    "publish": "lerna publish"
+  "homepage": "https://xexiu.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xexiu/astro-components",
+    "directory": ""
   },
-  "dependencies": { "@astrojs/ts-plugin": "^1.2.0" },
+  "workspaces": [
+    "*"
+  ],
+  "scripts": {
+    "publish": "bun lerna publish",
+    "publish:force": "bun lerna publish --force-publish '*'",
+    "version": "bun lerna version --conventional-commits",
+    "release": "bun lerna publish from-git"
+  },
   "devDependencies": {
-    "lerna": "^7.4.1"
-  }
+    "lerna": "^7.4.1",
+    "bun": "1.0.7",
+    "@astrojs/ts-plugin": "^1.2.0"
+  },
+  "description": "Independent astro components made with love. Pure HTML, CSS, No Javascript (moslty) ;)",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sergiu Mironescu <sergiu.mironescu@gmail.com>",
+    "url": "https://twitter.com/xexiudev"
+  },
+  "license": "ISC"
 }

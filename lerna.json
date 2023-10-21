@@ -2,11 +2,14 @@
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "command": {
     "publish": {
-      "conventionalCommits": true
+      "conventionalCommits": true,
+      "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
+      "message": "chore: publish release"
     }
   },
   "packages": [
     "*"
   ],
-  "version": "0.1.6"
+  "useNx": false,
+  "version": "independent"
 }
