@@ -14,7 +14,7 @@
     "index.ts",
     "src/*"
   ],
-  "gitHead": "a5aedd62346c0e9fa116039531e7054f06f4849f",
+  "gitHead": "2ee3bc5062cfc3c19efabf0dea5754eba796e1fa",
   "homepage": "https://xexiu.dev",
   "keywords": [
     "astro",
@@ -25,7 +25,7 @@
   ],
   "license": "ISC",
   "main": "index.ts",
-  "name": "@astro-components/astro-modal",
+  "name": "astro-modal",
   "publishConfig": {
     "access": "public"
   },
@@ -40,5 +40,5 @@
   },
   "type": "module",
   "typings": "src/modal.d.ts",
-  "version": "0.1.5"
+  "version": "0.1.6"
 }
