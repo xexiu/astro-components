@@ -11,7 +11,6 @@
         "name": "@astrojs/ts-plugin"
       },
     ],
-    "jsx": "react-jsx",
     "module": "commonjs",
     "declaration": true,
     "noImplicitAny": false,
