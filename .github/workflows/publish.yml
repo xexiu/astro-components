@@ -30,7 +30,7 @@ jobs:
 
     - name: "Setting up NPM Registry"
       run: |
-        npm set@xexiu:registry=https://npm.pkg.github.com/xexiu
+        npm set @xexiu:registry=https://npm.pkg.github.com/xexiu
         npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}"
 
     - name: "Version and publish" # Interesting step
