@@ -14,11 +14,7 @@
     "index.ts",
     "src/*"
   ],
-<<<<<<< Updated upstream
-  "gitHead": "3e1cea7deb5beef1d67859ff6378a14926a40526",
-=======
   "gitHead": "8d7512e1bcebce39efcff7cba1cfe97d7955dac0",
->>>>>>> Stashed changes
   "homepage": "https://xexiu.dev",
   "keywords": [
     "astro",
@@ -57,5 +53,5 @@
   },
   "type": "module",
   "typings": "src/modal.d.ts",
-  "version": "0.2.4"
+  "version": "0.3.10"
 }
