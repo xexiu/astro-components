@@ -1,7 +1,7 @@
 # 🚀 `astro-tabs`
 
-[![NPM](https://img.shields.io/npm/v/@xexiu/astro-modal)](https://www.npmjs.com/package/@xexiu/astro-modal)
-![Downloads](https://img.shields.io/npm/dt/@xexiu/astro-modal.svg)
+[![NPM](https://img.shields.io/npm/v/@xexiu/astro-tabs)](https://www.npmjs.com/package/@xexiu/astro-tabs)
+![Downloads](https://img.shields.io/npm/dt/@xexiu/astro-tabs.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/xexiu/astro-components/pulls)
 [![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
