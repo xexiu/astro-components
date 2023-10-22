@@ -4,13 +4,15 @@ import './modal-styles.css';
 
 const {
    id,
-   classes,
+   classes = '',
    ariaLabel,
    modalBtnClass = '',
    headerClass = '',
    sectionClass = '',
    footerClass = '',
-   closeBtnClass = ''
+   closeBtnClass = '',
+   btnText,
+   btnCloseAriaLabel
 }: Props = Astro.props;
 
 function isPlainString(input: string): boolean {
@@ -31,28 +33,27 @@ if (!isPlainString(id)) {
 
 <dialog
    id={id}
-   class="dialog-container"
-   class:list={classes}
+   class:list={['dialog-container', classes]}
    aria-label={ariaLabel}
    role="dialog"
 >
-   <header class="modal-header" class:list={headerClass}>
+   <header class:list={['modal-header', headerClass]}>
       <slot name="modal-title" />
    </header>
-   <section class="modal-section" class:list={sectionClass}>
+   <section class:list={['modal-section', sectionClass]}>
       <slot name="modal-main" />
    </section>
-   <footer class="modal-footer" class:list={footerClass}>
+   <footer class:list={['modal-footer', footerClass]}>
       <slot name="modal-footer" />
    </footer>
    <form method="dialog">
       <slot name="modal-close-button" />
-      <button class="close-btn-modal" class:list={closeBtnClass} aria-label="Cerrar Modal">
-         <img
+      <button class:list={['close-btn-modal', closeBtnClass]} aria-label={btnCloseAriaLabel}>
+         {btnText ? <span>{btnText}</span> :  <img
             src="/assets/icons-svg/icon-close.svg"
             alt="Cerrar Modal Icono"
             class="close-modal-icon"
-         />
+         />}
       </button>
    </form>
 </dialog>

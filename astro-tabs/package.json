@@ -24,7 +24,12 @@
     "ui",
     "html",
     "css",
-    "no-js"
+    "no-js",
+    "Seo",
+    "Responsive",
+    "html5 semantic",
+    "semantic",
+    "lighouse 100 score"
   ],
   "license": "ISC",
   "main": "index.ts",

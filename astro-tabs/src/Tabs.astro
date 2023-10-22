@@ -1,16 +1,7 @@
 ---
 import TabTitle from './TabTitle.astro';
+import { Props } from './tabs';
 import './tabs-styles.css';
-
-interface Props {
-   tabTitles: string[];
-   keys: string[];
-   classes?: string;
-   tabsNavClass?: string;
-   panelsContainerClass?: string;
-   panelClass?: string;
-   tabTitleClasses?: string;
-}
 
 const {
    tabTitles,
@@ -20,7 +11,7 @@ const {
    panelsContainerClass = '',
    panelClass = '',
    tabTitleClasses = ''
-} = Astro.props;
+}: Props = Astro.props;
 ---
 
 <div class:list={[`tabs-container tabs ${classes}`]}>
