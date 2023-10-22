@@ -11,7 +11,7 @@
     "*"
   ],
   "scripts": {
-    "publish": "bun lerna publish",
+    "publish": "bun lerna publish --conventional-commits",
     "publish:force": "bun lerna publish --force-publish '*'",
     "release": "bun lerna publish from-git",
     "lint:fix": "bun run eslint --fix --ext .js,.jsx,.ts,.astro .",

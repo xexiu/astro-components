@@ -47,6 +47,11 @@
     "tsc": "tsc"
   },
   "type": "module",
+<<<<<<< Updated upstream
   "version": "0.2.3",
   "gitHead": "3e1cea7deb5beef1d67859ff6378a14926a40526"
+=======
+  "version": "0.3.10",
+  "gitHead": "8d7512e1bcebce39efcff7cba1cfe97d7955dac0"
+>>>>>>> Stashed changes
 }
