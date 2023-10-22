@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/xexiu/astro-components/compare/@xexiu/astro-modal@0.3.0...@xexiu/astro-modal@0.3.1) (2023-10-22)
+
+**Note:** Version bump only for package @xexiu/astro-modal
+
+
+
+
+
 # [0.3.0](https://github.com/xexiu/astro-components/compare/@xexiu/astro-modal@0.2.4...@xexiu/astro-modal@0.3.0) (2023-10-22)
 
 
