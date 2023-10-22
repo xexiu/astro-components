@@ -1,6 +1,6 @@
-# astro-components
+# 🚀 `astro-components`
 
-Independent astro components made with love. Pure HTML, CSS, SEO friendly, Ligthouse score 100%, responsive, browsers API.
+Independent astro components made with love. **Pure HTML, CSS, SEO friendly, Ligthouse score 100%, responsive, browsers API**.
 
 ## HELLO there 👋
 
@@ -14,8 +14,8 @@ Independent astro components made with love. Pure HTML, CSS, SEO friendly, Ligth
 
 | Github Code | NPM Package |
 | --------- | -------- |
-|[Astro Modal Github](https://github.com/xexiu/astro-components/tree/master/astro-modal) | [Astro Modal NPM Package](https://www.npmjs.com/package/@xexiu/astro-modal) |
-|[Astro Tabs Github](https://github.com/xexiu/astro-components/tree/master/astro-tabs) | [Astro Tabs NPM Package](https://www.npmjs.com/package/@xexiu/astro-tabs) |
+|[Astro Modal Github](https://github.com/xexiu/astro-components/tree/master/astro-modal) | [Astro Modal NPM Package](https://www.npmjs.com/package/@xexiu/astro-modal) ![NPM](https://img.shields.io/npm/v/@xexiu/astro-modal) |
+|[Astro Tabs Github](https://github.com/xexiu/astro-components/tree/master/astro-tabs) | [Astro Tabs NPM Package](https://www.npmjs.com/package/@xexiu/astro-tabs) ![NPM](https://img.shields.io/npm/v/@xexiu/astro-tabs) |
 
 [//]: <> (End table Table)
 

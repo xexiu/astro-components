@@ -1,14 +1,27 @@
-# `astro-modal`
+# 🚀 `astro-modal`
+
+[![NPM](https://img.shields.io/npm/v/@xexiu/astro-modal)](https://www.npmjs.com/package/@xexiu/astro-modal)
+![Downloads](https://img.shields.io/npm/dt/@xexiu/astro-modal.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/xexiu/astro-components/pulls)
+[![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
+[![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
 
 ## HELLO there 👋
 
 - Twitter: <https://twitter.com/xexiudev> drop by and say hi, follow me and I follow you. Let's build a community.
 
-> Pure HTML and CSS simple modal for astro. Uses API from browsers. Compatible with web/mobile, responsive, HTML5 semantic, SEO friendly. Lighthouse score 100%. No-Javascript
+> **Pure HTML and CSS simple modal for astro.** Uses API from browsers. Compatible with web/mobile, responsive, HTML5 semantic, SEO friendly. Lighthouse score 100%. No-Javascript
 ---
 > Forking and giving a star will contribute to my motivation in making components for astro (react, react-native, etc...) that are purely HTML, CSS, SEO friendly and responsive :) (almost all components :P).
+---
 
-## Installation
+## Tutorials Roadmap
+
+- **Web2**: JavaScript, HTML, CSS, Node.js, Python (MLL, AI), React, NextJS React Native and more.
+- **Web3**: Blockchain, WEB3, dApps, smart contracts and more.
+
+## 📦 Installation
 
 - Using bun:
 
@@ -22,7 +35,7 @@ bun i @xexiu/astro-modal
 npm i @xexiu/astro-modal
 ```
 
-## API
+## 🔁 API
 
 - Props:
 
@@ -55,7 +68,7 @@ export interface Props {
 
 > Check code for more!
 
-## Usage in astro
+## 🛠 Usage in astro
 
 ```javascript
 ---
@@ -79,4 +92,4 @@ import Modal from '@xexiu/astro-modal';
 
 > This prodcut is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
-Chao pescao! 👋 🐠
+##  ¡Chao pescao! 👋 🐠
