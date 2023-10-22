@@ -47,6 +47,6 @@
     "tsc": "tsc"
   },
   "type": "module",
-  "version": "0.3.2",
-  "gitHead": "458a2f79eb446c671df24d36417df3e19e190d5e"
+  "version": "0.3.3",
+  "gitHead": "71cbdacee7ce4bb21dfcd4542bf45936cb85a76a"
 }
