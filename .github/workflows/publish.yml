@@ -23,10 +23,15 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Setup Bun
+    - name: "Setup Bun"
       uses: oven-sh/setup-bun@v1
       with:
         bun-version: latest
+
+    - name: "Setting up NPM Registry"
+      run: |
+        npm set@xexiu:registry=https://npm.pkg.github.com/xexiu
+        npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}"
 
     - name: "Version and publish" # Interesting step
       env:

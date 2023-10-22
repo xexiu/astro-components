@@ -19,12 +19,12 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Setup Bun
+    - name: "Setup Bun"
       uses: oven-sh/setup-bun@v1
       with:
         bun-version: latest
 
-    - name: "Setup npm"
+    - name: "Setting up NPM Registry"
       run: |
         npm set @xexiu:registry=https://npm.pkg.github.com/xexiu
         npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}"
@@ -33,5 +33,5 @@ jobs:
       run: |
         bun install
 
-    - name: Run tests # Run tests of all packages
+    - name: "Run tests" # Run tests of all packages
       run: bun run test
