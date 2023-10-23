@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "lerna": "^7.4.1",
-    "bun": "1.0.7",
+    "bun": "^1.0.7",
     "@astrojs/ts-plugin": "^1.2.0",
     "@typescript-eslint/parser": "^6.8.0",
     "eslint": "^8.52.0",
