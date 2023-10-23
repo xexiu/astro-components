@@ -40,6 +40,8 @@ jobs:
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor}}@users.noreply.github.com"
 
+        echo "registry=https://npm.pkg.github.com/@${{ github.actor }}" >> .npmrc
+
         if [ ${{ github.base_ref }} = development ]; then
           bunx lerna publish --conventional-commits --conventional-prerelease --preid beta --yes --message 'chore: release new beta version'
         else
