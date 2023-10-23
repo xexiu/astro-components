@@ -8,54 +8,56 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        ¡Gracias por tomarte el tiempo para completar este reporte de error!
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
+      label: Detalles de Contacto
+      description: ¿Cómo podemos ponernos en contacto contigo si necesitamos más información?
       placeholder: ex. email@example.com
     validations:
       required: false
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: ¿Qué sucedió?
+      description: Cuéntanos también, ¿qué esperabas que sucediera?
+      placeholder: ¡Cuéntanos lo que ves!
+      value: "¡Ocurrió un error!"
     validations:
       required: true
   - type: dropdown
     id: version
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Versión
+      description: ¿Qué versión de nuestro software estás utilizando?
       options:
         - 1.0.2 (Default)
         - 1.0.3 (Edge)
+        - Otro (especifíca)
     validations:
       required: true
   - type: dropdown
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: ¿En qué navegadores estás experimentando el problema?
       multiple: true
       options:
         - Firefox
         - Chrome
         - Safari
         - Microsoft Edge
+        - Otro (especifíca)
   - type: textarea
     id: logs
     attributes:
-      label: Relevant log output
+      label: Registros relevantes
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://xexiu.dev/code-conduct/)
+      label: Código de Conducta
+      description: Al enviar este problema, aceptas seguir nuestro [Código de Conducta](https://xexiu.dev/code-conduct/)
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: Acepto seguir el Código de Conducta de este proyecto
           required: true
