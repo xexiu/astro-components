@@ -34,7 +34,8 @@
     "optimization",
     "ui",
     "html",
-    "css"
+    "css",
+    "accessibility"
   ],
   "license": "ISC",
   "main": "index.ts",

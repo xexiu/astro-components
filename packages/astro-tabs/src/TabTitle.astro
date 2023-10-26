@@ -17,12 +17,14 @@ const {
 <button
    aria-controls={String(index)}
    role="tab"
-   aria-selected={firstChecked ? firstChecked : 'false'}
    class:list={['tab-wrapper', `tab-${index}`, 'btn-blue', tabTitleClasses]}
 >
    {
       firstChecked ? (
          <input
+            autofocus="false"
+            tabindex="-1"
+            aria-hidden="true"
             class={`radio-tab radio-tab-${index}`}
             type="radio"
             checked
@@ -31,6 +33,9 @@ const {
          />
       ) : (
          <input
+            autofocus="false"
+            tabindex="-1"
+            aria-hidden="true"
             class={`radio-tab radio-tab-${index}`}
             type="radio"
             name="radio-tab-input"
@@ -38,7 +43,9 @@ const {
          />
       )
    }
-   <label class="tab tab-label" for={`radio-tab-input-${index}`}>
+   <label
+      class="tab tab-label"
+      for={`radio-tab-input-${index}`}
+   >
       {tabTitle}
    </label>
-</button>

@@ -32,7 +32,12 @@ const {
       {
          keys.map(async (key: string, index: number) => {
             return (
-               <div role="tabpanel" id={String(index)} class:list={['panel', `panel-${index}`, panelClass]}>
+               <div
+                  role="tabpanel"
+                  aria-labelledby={`tab-${String(index)}`}
+                  id={String(index)}
+                  class:list={['panel', `panel-${index}`, panelClass]}
+               >
                   <Fragment set:html={Astro.slots.render('default', [key])} />
                </div>
             );

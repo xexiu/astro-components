@@ -29,7 +29,8 @@
     "Responsive",
     "html5 semantic",
     "semantic",
-    "lighouse 100 score"
+    "lighouse 100 score",
+    "accessibility"
   ],
   "license": "ISC",
   "main": "index.ts",

@@ -11,7 +11,7 @@
 
 - Twitter: <https://twitter.com/xexiudev> drop by and say hi, follow me and I follow you. Let's build a community.
 
-> **Pure HTML and CSS simple modal for astro.** Uses API from browsers. Compatible with web/mobile, responsive, HTML5 semantic, SEO friendly. Lighthouse score 100%. No-Javascript
+> **Pure HTML and CSS simple modal for astro.** Uses API from browsers. Compatible with web/mobile, responsive, HTML5 semantic, SEO friendly. Lighthouse score 100%. No-Javascript.
 ---
 > Forking and giving a star will contribute to my motivation in making components for astro (react, react-native, etc...) that are purely HTML, CSS, SEO friendly and responsive :) (almost all components :P).
 ---
