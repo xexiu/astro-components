@@ -1,0 +1,48 @@
+{
+  "author": {
+    "name": "Sergiu Mironescu <sergiu.mironescu@gmail.com>",
+    "url": "https://twitter.com/xexiudev"
+  },
+  "bugs": {
+    "url": "https://github.com/xexiu/astro-components/issues"
+  },
+  "description": "SEO builder with jsonLDGenerator for Astro",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "src/*"
+  ],
+  "gitHead": "8d7512e1bcebce39efcff7cba1cfe97d7955dac0",
+  "homepage": "https://xexiu.dev",
+  "keywords": [
+    "astro",
+    "astro-component",
+    "SEO",
+    "jsonLDGenerator",
+    "jsonLD",
+    "lighthouse",
+    "Web/mobile compatible",
+    "no-js",
+    "optimization"
+  ],
+  "license": "ISC",
+  "main": "index.ts",
+  "name": "@xexiu/astro-seo",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "astro-seo",
+    "type": "git",
+    "url": "https://github.com/xexiu/astro-components"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "tsc": "tsc"
+  },
+  "type": "module",
+  "typings": "src/types.d.ts",
+  "version": "0.0.1"
+}

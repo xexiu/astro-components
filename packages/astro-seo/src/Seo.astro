@@ -1,0 +1,93 @@
+---
+import type { Post, PostDataFeaturedImage } from './types';
+import jsonLDGenerator from './utils/helpers';
+
+interface Props {
+  title: string;
+  description: string;
+  url: string | any;
+  featured_image?: PostDataFeaturedImage;
+  frontmatter?: Post;
+  robots?: any;
+  defaultSchema: any;
+}
+
+const {
+   title,
+   description,
+   url = Astro.url,
+   featured_image,
+   frontmatter,
+   robots,
+   defaultSchema
+} = Astro.props;
+
+const featuredImg = featured_image?.src;
+
+const jsonLD = jsonLDGenerator({
+   type: frontmatter ? 'post' : 'website',
+   post: frontmatter,
+   url,
+   defaultSchema
+});
+---
+
+<!-- Open Graph -->
+<meta
+   property="og:site_name"
+   content="Bienvenid@ a mi blog de desarrollo Full Stack - Sergiu Mironescu"
+/>
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta
+   property="og:image"
+   content={`${import.meta.env.SITE}${
+      featuredImg?.src || defaultSchema.featured_image.src
+   }`}
+/>
+<meta
+   property="og:image:url"
+   content={`${import.meta.env.SITE}${
+      featuredImg?.src || defaultSchema.featured_image.src
+   }`}
+/>
+<meta
+   property="og:image:secure_url"
+   content={`${import.meta.env.SITE}${
+      featuredImg?.src || defaultSchema.featured_image.src
+   }`}
+/>
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="600" />
+<meta
+   property="og:image:alt"
+   content={featured_image?.alt || defaultSchema.featured_image.alt}
+/>
+
+<!-- Twitter -->
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+   name="twitter:image"
+   content={`${import.meta.env.SITE}${
+      featuredImg?.src || defaultSchema.featured_image.src
+   }`}
+/>
+<meta
+   name="twitter:image:src"
+   content={`${import.meta.env.SITE}${
+      featuredImg?.src || defaultSchema.featured_image.src
+   }`}
+/>
+<meta name="twitter:image:alt" content={title} />
+<meta name="twitter:domain" content={import.meta.env.SITE} />
+{robots && <meta name="robots" content="noindex" />}
+
+<!-- SEO -->
+<link rel="canonical" href={url} />
+
+<!-- JSON LD -->
+<Fragment set:html={jsonLD} />

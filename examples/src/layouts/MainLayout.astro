@@ -1,7 +1,10 @@
 ---
+import SEO from '@xexiu/astro-seo';
+import defaultSchema from './defaultSchema.json';
+
 const {
-   title = 'Título de la web/página',
-   description = 'Descripción de la web/página',
+   title = defaultSchema.title,
+   description = defaultSchema.description,
    featured_image,
    frontmatter,
    robots
@@ -17,16 +20,16 @@ const {
       <meta name="author" content="Sergiu Mironescu" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#222" />
-      <!-- <Seo
+      <SEO
        {title}
        {description}
        url={Astro.url}
        {featured_image}
        {frontmatter}
        {robots}
-      /> -->
+       {defaultSchema}
+      />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="sitemap" href="/sitemap-index.xml" />
       <title>{title}</title>
     <!-- Google tag (gtag.js) -->
     <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-F65W7TYF0D"
