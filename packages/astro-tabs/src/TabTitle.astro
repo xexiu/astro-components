@@ -1,9 +1,9 @@
 ---
 interface Props {
-   tabTitle: string;
-   index: number;
-   firstChecked?: boolean;
-   tabTitleClasses?: string;
+  tabTitle: string;
+  index: number;
+  firstChecked?: boolean;
+  tabTitleClasses?: string;
 }
 
 const {
@@ -14,7 +14,12 @@ const {
 } = Astro.props;
 ---
 
-<div class:list={['tab-wrapper', `tab-${index}`, 'btn-blue', tabTitleClasses]}>
+<button
+   aria-controls={String(index)}
+   role="tab"
+   aria-selected={firstChecked ? firstChecked : 'false'}
+   class:list={['tab-wrapper', `tab-${index}`, 'btn-blue', tabTitleClasses]}
+>
    {
       firstChecked ? (
          <input
@@ -36,4 +41,4 @@ const {
    <label class="tab tab-label" for={`radio-tab-input-${index}`}>
       {tabTitle}
    </label>
-</div>
+</button>

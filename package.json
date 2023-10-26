@@ -1,35 +1,33 @@
 {
-  "name": "@xexiu/root",
-  "private": true,
-  "homepage": "https://xexiu.dev",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/xexiu/astro-components",
-    "directory": ""
-  },
-  "workspaces": [
-    "*"
-  ],
-  "scripts": {
-    "publish": "bun lerna publish --conventional-commits",
-    "publish:force": "bun lerna publish --force-publish '*'",
-    "release": "bun lerna publish from-git",
-    "lint:fix": "bun run eslint --fix --ext .js,.jsx,.ts,.astro .",
-    "test": "echo \"Skipping: no pre-commit test specified\" && exit 0"
-  },
-  "devDependencies": {
-    "lerna": "^7.4.1",
-    "bun": "^1.0.7",
-    "@astrojs/ts-plugin": "^1.2.0",
-    "@typescript-eslint/parser": "^6.8.0",
-    "eslint": "^8.52.0",
-    "eslint-plugin-astro": "^0.29.1"
-  },
-  "description": "Independent astro components made with love. Pure HTML, CSS, No Javascript (moslty) ;)",
-  "version": "1.0.0",
   "author": {
     "name": "Sergiu Mironescu <sergiu.mironescu@gmail.com>",
     "url": "https://twitter.com/xexiudev"
   },
-  "license": "ISC"
+  "description": "Independent astro components made with love. Pure HTML, CSS, No Javascript (moslty) ;)",
+  "devDependencies": {
+    "bun": "^1.0.7",
+    "lerna": "^7.4.1",
+    "@astrojs/ts-plugin": "^1.2.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "astro": "^3.3.4",
+    "eslint": "^8.52.0",
+    "eslint-plugin-astro": "^0.29.1"
+  },
+  "homepage": "https://xexiu.dev",
+  "license": "ISC",
+  "name": "@xexiu/root",
+  "private": true,
+  "repository": {
+    "directory": "",
+    "type": "git",
+    "url": "https://github.com/xexiu/astro-components"
+  },
+  "scripts": {
+    "lint:fix": "bun run eslint --fix --ext .js,.jsx,.ts,.astro .",
+    "publish": "bun lerna publish --conventional-commits",
+    "publish:force": "bun lerna publish --force-publish '*'",
+    "release": "bun lerna publish from-git",
+    "test": "echo \"Skipping: no pre-commit test specified\" && exit 0"
+  },
+  "version": "1.0.0"
 }

@@ -1,7 +1,9 @@
+button {
+  all: unset;
+}
+
 html:has(dialog[open]) body {
     overflow: hidden;
-    margin: 0;
-    padding: 0;
     height: 100%;
     -webkit-overflow-scrolling: touch;
     position: fixed;

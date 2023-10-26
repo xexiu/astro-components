@@ -8,7 +8,7 @@
     }
   },
   "packages": [
-    "*"
+    "packages/*"
   ],
   "useNx": false,
   "version": "independent"

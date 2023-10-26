@@ -1,4 +1,5 @@
 ---
+import iconSvg from './assets/icons-svg/icon-close.svg';
 import type { Props } from './modal';
 import './modal-styles.css';
 
@@ -28,7 +29,9 @@ if (!isPlainString(id)) {
 
 <button
    onclick={`window.${id}.showModal()`}
-   class:list={['btn-modal', modalBtnClass]}><slot name="open-modal" /></button
+   aria-controls={id}
+   type="button"
+   class:list={['btn-modal', modalBtnClass]}><slot name="open-modal-button" /></button
 >
 
 <dialog
@@ -36,6 +39,8 @@ if (!isPlainString(id)) {
    class:list={['dialog-container', classes]}
    aria-label={ariaLabel}
    role="dialog"
+   aria-modal="true"
+   aria-labelledby={ariaLabel}
 >
    <header class:list={['modal-header', headerClass]}>
       <slot name="modal-title" />
@@ -48,9 +53,9 @@ if (!isPlainString(id)) {
    </footer>
    <form method="dialog">
       <slot name="modal-close-button" />
-      <button class:list={['close-btn-modal', closeBtnClass]} aria-label={btnCloseAriaLabel}>
+      <button aria-controls={id} class:list={['close-btn-modal', closeBtnClass]} aria-label={btnCloseAriaLabel}>
          {btnText ? <span>{btnText}</span> :  <img
-            src="/assets/icons-svg/icon-close.svg"
+            src={iconSvg.src}
             alt="Cerrar Modal Icono"
             class="close-modal-icon"
          />}
