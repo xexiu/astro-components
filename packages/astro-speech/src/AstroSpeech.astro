@@ -1,0 +1,98 @@
+---
+interface Props {
+  classes?: string;
+  title?: string;
+  text: string;
+  btnClasses?: string;
+  btnText?: any;
+}
+
+const { classes = '', title = '', text, btnClasses = '', btnText, ...rest } = Astro.props;
+---
+
+<xe-article-speech
+   class:list={['article-speech', classes]}
+   title={title}
+   data-article-text={text}
+   {...rest}
+>
+   <button
+      aria-pressed="false"
+      aria-label={title}
+      class:list={['btn-speech', btnClasses]}>{btnText}</button
+   >
+   <slot />
+</xe-article-speech>
+
+<script>
+  class ArticleSpeech extends HTMLElement {
+     constructor() {
+        super();
+        let _voices = [] as any;
+        const _iOSvoices = [
+           {
+              name: 'Flo (Spanish (Spain))"',
+              voiceURI: 'com.apple.eloquence.es-ES.Flo',
+              lang: 'es-ES',
+              localService: true,
+              default: true
+           }
+        ];
+        const btn = this.querySelector('.btn-speech') as HTMLButtonElement;
+        const utterance = new SpeechSynthesisUtterance();
+
+        window.speechSynthesis.onvoiceschanged = function() {
+           _voices = window.speechSynthesis.getVoices();
+
+           if (_voices.length === 0) {
+              // use hard-coded list because speechSynthesis.getVoices() didn't work on IOS returns []
+              _voices = _iOSvoices;
+           }
+
+           utterance.voice = _voices.filter(
+              (voice: any) => voice.name == 'Flo (Spanish (Spain))"'
+           )[0];
+        };
+
+        utterance.lang = 'es-ES';
+        utterance.text = this.dataset.articleText as string;
+        utterance.voice = window.speechSynthesis.getVoices()[0];
+
+        window.speechSynthesis.cancel();
+
+        this?.addEventListener('click', (event: Event) => {
+           event.preventDefault();
+           btn.ariaPressed = 'true';
+
+           if (btn.classList.contains('pause')) {
+              this.pause();
+              btn.classList.toggle('pause');
+           } else {
+              this.play(utterance);
+              btn.classList.toggle('pause');
+           }
+        });
+
+        utterance.addEventListener('end', (event: Event) => {
+           event.preventDefault();
+           btn.classList.toggle('pause');
+        });
+     }
+
+     play(text: SpeechSynthesisUtterance) {
+        if (this.dataset.paused === 'true') {
+           this.dataset.paused = 'false';
+           window.speechSynthesis.resume();
+        } else {
+           window.speechSynthesis.speak(text);
+        }
+     }
+
+     pause() {
+        window.speechSynthesis.pause();
+        this.dataset.paused = 'true';
+     }
+  }
+
+  customElements.define('xe-article-speech', ArticleSpeech);
+</script>

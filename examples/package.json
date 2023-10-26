@@ -3,6 +3,7 @@
     "@xexiu/astro-modal": "../packages/astro-modal",
     "@xexiu/astro-progress-bar": "../packages/astro-progress-bar",
     "@xexiu/astro-seo": "../packages/astro-seo",
+    "@xexiu/astro-speech": "../packages/astro-speech",
     "@xexiu/astro-tabs": "../packages/astro-tabs"
   },
   "devDependencies": {

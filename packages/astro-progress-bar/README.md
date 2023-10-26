@@ -62,7 +62,7 @@ import ProgressBar from '@xexiu/astro-progress-bar';
 </div>
 ```
 
-> If classes are NOT specified, the modal has default styles.
+> If classes are NOT specified, the progress bar has default styles.
 ---
 > Demo: <https://xexiu.dev/blog> (click an article and scroll)
 > This prodcut is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.

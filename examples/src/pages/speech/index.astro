@@ -1,0 +1,81 @@
+---
+import MainLayout from '@layouts/MainLayout.astro';
+import AstroSpeech from '@xexiu/astro-speech';
+
+const blogs = {
+   latest: [
+      {
+         id: 'post-3.md',
+         slug: 'post-3',
+         body:
+        '\n' +
+        'TEST3\n' +
+        '\n' +
+        'Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do. Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.\n' +
+        '\n' +
+        '## Kinda Sus\n' +
+        '\n' +
+        '  ![Pica](/src/images/pic_ts.jpeg)\n' +
+        '\n' +
+        '  Ad ipsum velit sint enim exercitation mollit consequat elit mollit qui commodo aute. Laboris culpa voluptate aliquip incididunt duis. Cupidatat aliquip et sunt aute fugiat cupidatat irure voluptate. Occaecat officia et sunt.\n' +
+        '\n' +
+        '  ```js\n' +
+        '  test()\n' +
+        '  ```\n' +
+        '\n' +
+        '  Officia tempor voluptate enim consequat cillum aute fugiat cupidatat incididunt magna labore in commodo. Eiusmod nostrud non deserunt. Incididunt excepteur pariatur magna. Proident aute ad in velit labore enim sit cillum ad mollit proident et qui. Esse sunt ullamco ullamco ipsum enim eu esse id eu exercitation laboris magna Lorem. Anim nostrud officia anim velit do exercitation labore mollit excepteur excepteur ex.\n' +
+        '\n' +
+        '## Is anyone reading these?\n' +
+        '\n' +
+        '  Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing. Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.\n' +
+        '\n' +
+        '  Labore commodo do incididunt amet ad et exercitation magna veniam veniam aute laboris excepteur occaecat Lorem. Fugiat in magna commodo magna nulla eu. Fugiat nulla aliqua sunt duis enim irure aliquip fugiat aliqua Lorem ad tempor incididunt proident incididunt. Labore fugiat tempor esse cillum voluptate culpa anim sunt consequat. Ipsum minim nostrud laborum sit aliquip duis officia consequat est. Fugiat mollit elit nulla. Sit minim est elit labore. Sunt eu pariatur pariatur ut deserunt nulla labore in non sit tempor voluptate ex.\n' +
+        '\n' +
+        '  ![alt text](/src/images/hero-img.png "alt title")\n' +
+        '',
+         collection: 'blog',
+         data: {
+            title:
+          'TEST3 Running out of sample post ideas for thd effs sfggds eeffg in 3 lines with the elipsis css!!!',
+            excerpt:
+          'Sometimes you just run out of ideas for sample blog posts. Sometimes you just run out of',
+            tags: ['css', 'js', 'etherumdfdfdfdf', 'solidjs'],
+            category: 'General',
+            is_private: false,
+            author: 'Victoria Greenfelder',
+            date: new Date('2023-09-22T15:14:10.000Z'),
+            featured_post: false,
+            featured_image: {
+               src: {
+                  src: '/@fs/Users/smironescu/Desktop/sm_web/sm_astro_blog/src/images/mnt1.png?origWidth=2560&origHeight=1080&origFormat=png',
+                  width: 2560,
+                  height: 1080,
+                  format: 'png',
+                  orientation: undefined
+               },
+               alt: 'A picture of a coder'
+            }
+         }
+      }
+   ]
+};
+
+const post = blogs.latest[0];
+---
+
+<MainLayout
+   title={post.data.title}
+   description={post.data.excerpt}
+   featured_image={post.data.featured_image}
+   frontmatter={post}
+>
+   <a href="/">Volver Atras</a>
+   <p>{blogs.latest[0].body}</p>
+   <AstroSpeech
+      title="Escuchar Artículo"
+      text={blogs.latest[0].body}
+      classes="tooltip"
+      data-tooltip-placement="top"
+      btnText="Escuchar"
+   />
+</MainLayout>

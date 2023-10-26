@@ -1,0 +1,54 @@
+{
+  "author": {
+    "name": "Sergiu Mironescu <sergiu.mironescu@gmail.com>",
+    "url": "https://twitter.com/xexiudev"
+  },
+  "bugs": {
+    "url": "https://github.com/xexiu/astro-components/issues"
+  },
+  "description": "HTML, CSS and a bit of javascript made with Custom Elements astro-speech for Astro.",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "src/*"
+  ],
+  "homepage": "https://xexiu.dev",
+  "keywords": [
+    "astro",
+    "astro-component",
+    "article-speech",
+    "optimization",
+    "html5 semantic",
+    "semantic",
+    "SEO",
+    "responsive",
+    "ui",
+    "lighthouse",
+    "Browsers API",
+    "Web/mobile compatible",
+    "optimization",
+    "ui",
+    "html",
+    "css",
+    "custom-elements"
+  ],
+  "license": "ISC",
+  "main": "index.ts",
+  "name": "@xexiu/astro-speech",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "astro-speech",
+    "type": "git",
+    "url": "https://github.com/xexiu/astro-components"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "tsc": "tsc"
+  },
+  "type": "module",
+  "version": "0.0.0"
+}
