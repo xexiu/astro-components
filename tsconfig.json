@@ -7,7 +7,7 @@
   ],
   "allowJs": true,
   "compilerOptions": {
-    "target": "es6",
+    "target": "ESNEXT",
     "jsx": "react-jsx",
     "types": [
       "astro/client"

@@ -10,13 +10,8 @@ function slugify(text: string): string {
 }
 
 function readingTime(text: string): { time: number; wordCount: number } {
-   // Split the text into an array of words
    const wordsArray = text.split(' ');
-
-   // Count the number of words in the array
    const wordCount = wordsArray.length;
-
-   // Calculate the estimated reading time
    const wordsPerMinute = 200;
    const readingTime = Math.ceil(wordCount / wordsPerMinute);
 
@@ -26,13 +21,13 @@ function readingTime(text: string): { time: number; wordCount: number } {
    };
 }
 
-
 export default function jsonLDGenerator({ type, post, url, defaultSchema }) {
-   console.log('GEN', post);
    const copyright = new Date().getFullYear().toString();
 
    if (type === 'post') {
       const { wordCount } = readingTime(post.body);
+      const keywords = JSON.stringify(post.data.tags);
+      const unquoted = keywords.replaceAll('"', '\'');
 
       return `<script type="application/ld+json">
       {
@@ -52,7 +47,7 @@ export default function jsonLDGenerator({ type, post, url, defaultSchema }) {
           "url": "${import.meta.env.SITE}/author/${slugify(post.data.author)}"
         },
         "datePublished": "${post.data.date}",
-        "keywords": "${post.data.tags}",
+        "keywords": "${unquoted}",
         "isFamilyFriendly": "true",
         "copyrightYear": "${copyright}"
       }
