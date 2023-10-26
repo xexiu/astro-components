@@ -1,0 +1,54 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "lib": [
+    "dom",
+    "dom.iterable",
+    "esnext"
+  ],
+  "allowJs": true,
+  "compilerOptions": {
+    "target": "es6",
+    "jsx": "react-jsx",
+    "types": [
+      "astro/client"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@schemas/*": [
+        "src/schemas/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@images/*": [
+        "src/images/*"
+      ],
+      "@js/*": [
+        "src/js/*"
+      ],
+      "types/*": [
+        "src/types/*"
+      ]
+    },
+    "strictNullChecks": true,
+    "allowJs": true
+  },
+  "include": [
+    "src",
+    "modules.d.ts",
+    "scripts/replaceAssetPaths.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "netlify"
+  ],
+}

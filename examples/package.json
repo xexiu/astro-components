@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@xexiu/astro-modal": "../packages/astro-modal",
+    "@xexiu/astro-tabs": "../packages/astro-tabs"
+  },
+  "devDependencies": {
+    "@astrojs/ts-plugin": "^1.2.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "astro": "^3.3.4",
+    "eslint": "^8.52.0",
+    "eslint-plugin-astro": "^0.29.1"
+  },
+  "name": "examples",
+  "private": true,
+  "scripts": {
+    "astro": "astro",
+    "build": "astro build",
+    "clean-install": "rm -rf node_modules && rm -rf package-lock.json && rm -rf bun.lockb && rm -rf dist && bun i",
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "start": "astro dev"
+  },
+  "type": "module",
+  "version": "0.0.1"
+}

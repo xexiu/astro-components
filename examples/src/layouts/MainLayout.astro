@@ -1,0 +1,52 @@
+---
+const {
+   title = 'Título de la web/página',
+   description = 'Descripción de la web/página',
+   featured_image,
+   frontmatter,
+   robots
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" data-current-page={Astro.url.pathname}>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="generator" content={Astro.generator} />
+      <meta name="description" content={description} />
+      <meta name="author" content="Sergiu Mironescu" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#222" />
+      <!-- <Seo
+       {title}
+       {description}
+       url={Astro.url}
+       {featured_image}
+       {frontmatter}
+       {robots}
+      /> -->
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="sitemap" href="/sitemap-index.xml" />
+      <title>{title}</title>
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-F65W7TYF0D"
+    ></script>
+    <script type="text/partytown">
+       window.dataLayer = window.dataLayer || [];
+
+       function gtag() {
+          dataLayer.push(arguments);
+       }
+
+       gtag('js', new Date());
+
+       gtag('config', 'G-F65W7TYF0D');
+    </script>
+   </head>
+   <body id=`${Astro.url.pathname === '/' ? 'landing-main-body' : 'main-body'}`>
+      <main id=`${Astro.url.pathname === '/' ? 'homepage' : 'page'}`>
+         <slot> Default Text</slot>
+         <!-- <Sidebar /> -->
+      </main>
+   </body>
+</html>

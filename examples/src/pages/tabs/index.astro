@@ -1,0 +1,46 @@
+---
+import MainLayout from '@layouts/MainLayout.astro';
+import Tabs from '@xexiu/astro-tabs';
+
+const blogs = {
+   latest: [{
+      id: 1,
+      title: 'Test 1',
+      description: 'This is a text for tab 1'
+   }],
+   pinned: [{
+      id: 1,
+      title: 'Test 2',
+      description: 'This is a text for tab 2'
+   }],
+   private: [{
+      id: 1,
+      title: 'Test 3',
+      description: 'This is a text for tab 3'
+   }]
+};
+const keys = Object.keys(blogs); // ['latest', 'pinned', 'private']
+---
+<MainLayout title="Tabs Example">
+   <a href="/">Volver Atras</a>
+   <Tabs {keys} tabTitles={['Title for Latest', 'Title for Private', 'Title for Pinned']}>
+      {
+         (key: string) => {
+            return (
+               <Fragment>
+                  <div>
+                     {
+                        blogs[key].map((blog: any) =>
+                           <div>
+                              {blog.title}
+                              <div>{blog.description}</div>
+                           </div>
+                        )
+                     }
+                  </div>
+               </Fragment>
+            );
+         }
+      }
+   </Tabs>
+</MainLayout>
