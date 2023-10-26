@@ -1,8 +1,9 @@
 {
   "dependencies": {
     "@xexiu/astro-modal": "../packages/astro-modal",
-    "@xexiu/astro-tabs": "../packages/astro-tabs",
-    "@xexiu/astro-seo": "../packages/astro-seo"
+    "@xexiu/astro-progress-bar": "../packages/astro-progress-bar",
+    "@xexiu/astro-seo": "../packages/astro-seo",
+    "@xexiu/astro-tabs": "../packages/astro-tabs"
   },
   "devDependencies": {
     "@astrojs/ts-plugin": "^1.2.0",

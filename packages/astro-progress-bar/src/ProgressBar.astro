@@ -1,0 +1,75 @@
+---
+interface Props {
+  classes?: string;
+}
+
+const { classes = '' } = Astro.props;
+---
+
+<xe-progress-bar>
+   <progress
+      id="progress-bar-astro"
+      class:list={['progress-bar', classes]}
+      max="100"></progress>
+</xe-progress-bar>
+
+<script>
+  class ProgressBar extends HTMLElement {
+     constructor() {
+        super();
+
+        const progressBar = this.querySelector(
+           '.progress-bar'
+        ) as HTMLProgressElement;
+
+        window.addEventListener('scroll', function() {
+           if (progressBar) {
+              const width =
+            ((document.body.scrollTop || document.documentElement.scrollTop) /
+              (document.documentElement.scrollHeight -
+                document.documentElement.clientHeight)) *
+            100;
+              progressBar.style.width = `${width}%`;
+              progressBar.value = width;
+           }
+        });
+     }
+  }
+
+  customElements.define('xe-progress-bar', ProgressBar);
+</script>
+
+<style>
+  .progress-bar {
+    height: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    width: 0;
+  }
+  .progress-bar[value]::-webkit-progress-value {
+    background-image:
+      -webkit-linear-gradient(
+        -45deg,
+        transparent 33%,
+        rgba(0, 0, 0, 0.1) 33%,
+        rgba(0, 0, 0, 0.1) 66%,
+        transparent 66%
+      ),
+      -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+      -webkit-linear-gradient(left, #09c, #f44);
+
+    border-radius: 2px;
+    background-size:
+      35px 20px,
+      100% 100%,
+      100% 100%;
+  }
+</style>

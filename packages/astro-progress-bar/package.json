@@ -1,0 +1,54 @@
+{
+  "author": {
+    "name": "Sergiu Mironescu <sergiu.mironescu@gmail.com>",
+    "url": "https://twitter.com/xexiudev"
+  },
+  "bugs": {
+    "url": "https://github.com/xexiu/astro-components/issues"
+  },
+  "description": "HTML, CSS and a bit of javascript made with Custom Elements progress bar for Astro.",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "src/*"
+  ],
+  "homepage": "https://xexiu.dev",
+  "keywords": [
+    "astro",
+    "astro-component",
+    "progress-bar",
+    "optimization",
+    "html5 semantic",
+    "semantic",
+    "SEO",
+    "responsive",
+    "ui",
+    "lighthouse",
+    "Browsers API",
+    "Web/mobile compatible",
+    "no-js",
+    "optimization",
+    "ui",
+    "html",
+    "css"
+  ],
+  "license": "ISC",
+  "main": "index.ts",
+  "name": "@xexiu/astro-progress-bar",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "astro-progress-bar",
+    "type": "git",
+    "url": "https://github.com/xexiu/astro-components"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "tsc": "tsc"
+  },
+  "type": "module",
+  "version": "0.0.0"
+}
