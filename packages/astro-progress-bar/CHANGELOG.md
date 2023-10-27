@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/xexiu/astro-components/compare/@xexiu/astro-progress-bar@0.2.0...@xexiu/astro-progress-bar@0.3.0) (2023-10-27)
+
+
+### Features
+
+* **astro-speech:** Add new component for article speech ([8a4cae5](https://github.com/xexiu/astro-components/commit/8a4cae588530d3ac88f5298f7a2265572d3ef92d))
+
+
+
+
+
 # [0.2.0](https://github.com/xexiu/astro-components/compare/@xexiu/astro-progress-bar@0.1.0...@xexiu/astro-progress-bar@0.2.0) (2023-10-26)
 
 
