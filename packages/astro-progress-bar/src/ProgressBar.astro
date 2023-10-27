@@ -1,15 +1,20 @@
 ---
 interface Props {
   classes?: string;
+  excludeElementSelector?: string;
 }
 
-const { classes = '' } = Astro.props;
+const {
+   classes = '',
+   excludeElementSelector = '.exclude-me-from-progress-bar'
+} = Astro.props;
 ---
 
 <xe-progress-bar>
    <progress
       id="progress-bar-astro"
       class:list={['progress-bar', classes]}
+      data-exclude-element-selector={excludeElementSelector}
       max="100"></progress>
 </xe-progress-bar>
 
@@ -18,19 +23,25 @@ const { classes = '' } = Astro.props;
      constructor() {
         super();
 
-        const progressBar = this.querySelector(
-           '.progress-bar'
-        ) as HTMLProgressElement;
+        const progressBar = this.querySelector('.progress-bar') as HTMLProgressElement;
+        const excludedElement = document.querySelector(progressBar.dataset.excludeElementSelector || '') as HTMLElement;
 
         window.addEventListener('scroll', function() {
            if (progressBar) {
-              const width =
-            ((document.body.scrollTop || document.documentElement.scrollTop) /
-              (document.documentElement.scrollHeight -
-                document.documentElement.clientHeight)) *
-            100;
-              progressBar.style.width = `${width}%`;
-              progressBar.value = width;
+              const scrollPosition = document.documentElement.scrollTop;
+              const totalScroll = document.body.scrollHeight - document.documentElement.clientHeight;
+
+              if (progressBar && excludedElement) {
+                 const excludedElementHeight = excludedElement.clientHeight;
+                 const width = (scrollPosition / (totalScroll - excludedElementHeight)) * 100;
+
+                 progressBar.style.width = `${Math.min(width, 100)}%`;
+                 progressBar.value = Math.min(width, 100);
+              } else {
+                 const width = (scrollPosition / totalScroll) * 100;
+                 progressBar.style.width = `${Math.min(width, 100)}%`;
+                 progressBar.value = Math.min(width, 100);
+              }
            }
         });
      }

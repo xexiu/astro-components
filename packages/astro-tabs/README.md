@@ -97,6 +97,6 @@ const keys = Object.keys(blogs); // ['latest', 'pinned', 'private']
 > Screenshot:
 <img src="../astro-tabs/src/assets/images/demo_astro_tabs.gif" alt="Demo Screenshot">
 
-> This prodcut is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
+> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ##  ¡Chao pescao! 👋 🐠

@@ -43,6 +43,7 @@ npm i @xexiu/astro-progress-bar
 ```javascript
 interface Props {
     classes?: string; // Optional
+    excludeElementSelector?: string; // Optional
 }
 ```
 
@@ -65,6 +66,6 @@ import ProgressBar from '@xexiu/astro-progress-bar';
 > If classes are NOT specified, the progress bar has default styles.
 ---
 > Demo: <https://xexiu.dev/blog> (click an article and scroll)
-> This prodcut is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
+> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ##  ¡Chao pescao! 👋 🐠

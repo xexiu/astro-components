@@ -125,6 +125,6 @@ const {
 ---
 > This will generate all the needed SEO as well as jsonLD generator <https://json-ld.org/>
 > Demo: <https://xexiu.dev> or check examples folder in the repository <https://github.com/xexiu/astro-components>
-> This prodcut is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
+> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ##  ¡Chao pescao! 👋 🐠

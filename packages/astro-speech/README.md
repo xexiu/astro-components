@@ -125,6 +125,6 @@ const blogs = {
 
 ---
 > Demo: <https://xexiu.dev/blog> (open an article and click the listen icon from the fixed bottom bar)
-> This prodcut is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
+> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ##  ¡Chao pescao! 👋 🐠

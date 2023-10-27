@@ -90,6 +90,6 @@ import Modal from '@xexiu/astro-modal';
 > Screenshot:
 <img src="../astro-modal/src/assets/images/demo_astro_modal.png" alt="Demo Screenshot">
 
-> This prodcut is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
+> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ##  ¡Chao pescao! 👋 🐠
