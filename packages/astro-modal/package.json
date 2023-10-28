@@ -14,7 +14,7 @@
     "index.ts",
     "src/*"
   ],
-  "gitHead": "a9451573b9627db205f360786af273c93aa25cb7",
+  "gitHead": "123e7ba1f4a16006fdaf4ac393f822732d3a84c2",
   "homepage": "https://xexiu.dev",
   "keywords": [
     "astro",
@@ -54,5 +54,5 @@
   },
   "type": "module",
   "typings": "src/modal.d.ts",
-  "version": "0.5.5"
+  "version": "0.5.6"
 }
