@@ -16,7 +16,7 @@
 > Forking and giving a star will contribute to my motivation in making components for astro (react, react-native, etc...) that are purely HTML, CSS, SEO friendly and responsive :) (almost all components :P).
 ---
 
-> Demo: [Astro Tabs](https://xexiu.dev/demos/astro/tabs)
+> **Demo**: [Astro Tabs](https://xexiu.dev/demos/astro/tabs)
 > This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ## Tutorials Roadmap
