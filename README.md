@@ -32,7 +32,7 @@ Independent astro components made with love. **Pure HTML, CSS, SEO friendly, Lig
 - [ ] Astro Search Bar (responsive, simple, attrs...)
 - [X] Astro SEO (JSON-LD Generator JS, metas, attrs...)
 - [ ] Astro Custom Components JS (custom components register js, attrs...)
-- [ ] Astro Accordion (pure html, css, attrs...)
+- [X] Astro Accordion (pure html, css, attrs...)
 - [ ] Astro Dropdown (pure html, css, attrs...)
 - [ ] Astro Expandable (pure html, css, attrs...)
 
