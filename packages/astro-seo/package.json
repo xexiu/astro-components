@@ -44,5 +44,5 @@
   },
   "type": "module",
   "typings": "src/types.d.ts",
-  "version": "0.1.7"
+  "version": "0.1.8"
 }
