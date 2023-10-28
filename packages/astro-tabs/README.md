@@ -16,6 +16,9 @@
 > Forking and giving a star will contribute to my motivation in making components for astro (react, react-native, etc...) that are purely HTML, CSS, SEO friendly and responsive :) (almost all components :P).
 ---
 
+> Demo: [Astro Tabs](https://xexiu.dev/demos/astro/tabs)
+> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
+
 ## Tutorials Roadmap
 
 - **Web2**: JavaScript, HTML, CSS, Node.js, Python (MLL, AI), React, NextJS React Native and more.
@@ -93,10 +96,5 @@ const keys = Object.keys(blogs); // ['latest', 'pinned', 'private']
 
 > If classes are NOT specified, the tabs have default styles.
 ---
-> Demo: <https://xexiu.dev/blog>
-> Screenshot:
-<img src="../astro-tabs/src/assets/images/demo_astro_tabs.gif" alt="Demo Screenshot">
-
-> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ##  ¡Chao pescao! 👋 🐠

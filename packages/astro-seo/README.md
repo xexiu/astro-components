@@ -15,6 +15,9 @@
 ---
 > Forking and giving a star will contribute to my motivation in making components for astro (react, react-native, etc...) that are purely HTML, CSS, SEO friendly and responsive :) (almost all components :P).
 ---
+> This will generate all the needed SEO as well as jsonLD generator <https://json-ld.org/>
+> **DEMO**: <https://xexiu.dev> or check examples folder in the repository <https://github.com/xexiu/astro-components>
+> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ## Tutorials Roadmap
 
@@ -123,8 +126,5 @@ const {
 ```
 
 ---
-> This will generate all the needed SEO as well as jsonLD generator <https://json-ld.org/>
-> Demo: <https://xexiu.dev> or check examples folder in the repository <https://github.com/xexiu/astro-components>
-> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ##  ¡Chao pescao! 👋 🐠

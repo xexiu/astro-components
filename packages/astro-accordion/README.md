@@ -1,7 +1,7 @@
 # 🚀 `astro-modal`
 
-[![NPM](https://img.shields.io/npm/v/@xexiu/astro-progress-bar)](https://www.npmjs.com/package/@xexiu/astro-progress-bar)
-![Downloads](https://img.shields.io/npm/dt/@xexiu/astro-progress-bar.svg)
+[![NPM](https://img.shields.io/npm/v/@xexiu/astro-accordion)](https://www.npmjs.com/package/@xexiu/astro-accordion)
+![Downloads](https://img.shields.io/npm/dt/@xexiu/astro-accordion.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/xexiu/astro-components/pulls)
 [![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build)
 [![TypeScript](https://img.shields.io/badge/TypeScript-333333.svg?logo=typescript)](http://www.typescriptlang.org/)
@@ -11,13 +11,12 @@
 
 - Twitter: <https://twitter.com/xexiudev> drop by and say hi, follow me and I follow you. Let's build a community.
 
-> **HTML, CSS and a bit of javascript made with Custom Elements progress bar for astro.** Uses API from browsers. Compatible with web/mobile, responsive, HTML5 semantic, SEO friendly. Lighthouse score 100%.
-> Uses Custom Elements for a better optimization: `customElements.define('xe-progress-bar', ProgressBar);`
+> **ASTRO ACCORDION: HTML, CSS and a bit of javascript made with Custom Elements accordion for astro.** Uses API from browsers. Compatible with web/mobile, responsive, HTML5 semantic, SEO friendly. Lighthouse score 100%. Accesibility (ARIA attrs)
+> Uses Custom Elements for a better optimization: `customElements.define('xe-accordion', Accordion);`
 ---
 > Forking and giving a star will contribute to my motivation in making components for astro (react, react-native, etc...) that are purely HTML, CSS, SEO friendly and responsive :) (almost all components :P).
 ---
-
-> **DEMO**: [Astro Progress-Bar](https://xexiu.dev/demos/astro/progress-bar)
+> **DEMO**: [Astro Accordion](https://xexiu.dev/demos/astro/accordion)
 > This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ## Tutorials Roadmap

@@ -5,15 +5,17 @@ interface Props {
   text: string;
   btnClasses?: string;
   btnText?: any;
+  rate?: number;
 }
 
-const { classes = '', title = '', text, btnClasses = '', btnText, ...rest } = Astro.props;
+const { classes = '', title = '', text, btnClasses = '', btnText, rate = .8, ...rest } = Astro.props;
 ---
 
 <xe-article-speech
    class:list={['article-speech', classes]}
    title={title}
    data-article-text={text}
+   data-rate={rate}
    {...rest}
 >
    <button
@@ -39,6 +41,7 @@ const { classes = '', title = '', text, btnClasses = '', btnText, ...rest } = As
            }
         ];
         const btn = this.querySelector('.btn-speech') as HTMLButtonElement;
+        const { rate } = this.dataset;
         const utterance = new SpeechSynthesisUtterance();
 
         window.speechSynthesis.onvoiceschanged = function() {
@@ -57,6 +60,7 @@ const { classes = '', title = '', text, btnClasses = '', btnText, ...rest } = As
         utterance.lang = 'es-ES';
         utterance.text = this.dataset.articleText as string;
         utterance.voice = window.speechSynthesis.getVoices()[0];
+        utterance.rate = rate as unknown as number;
 
         window.speechSynthesis.cancel();
 

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@xexiu/astro-accordion": "../packages/astro-accordion",
     "@xexiu/astro-modal": "../packages/astro-modal",
     "@xexiu/astro-progress-bar": "../packages/astro-progress-bar",
     "@xexiu/astro-seo": "../packages/astro-seo",

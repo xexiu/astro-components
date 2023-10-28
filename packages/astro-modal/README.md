@@ -16,6 +16,9 @@
 > Forking and giving a star will contribute to my motivation in making components for astro (react, react-native, etc...) that are purely HTML, CSS, SEO friendly and responsive :) (almost all components :P).
 ---
 
+> **DEMO**: [Astro Modal](https://xexiu.dev/demos/astro/modal)
+> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
+
 ## Tutorials Roadmap
 
 - **Web2**: JavaScript, HTML, CSS, Node.js, Python (MLL, AI), React, NextJS React Native and more.
@@ -86,10 +89,5 @@ import Modal from '@xexiu/astro-modal';
 
 > If classes are NOT specified, the modal has default styles.
 ---
-> Demo: <https://xexiu.dev/blog> (click an article and share it from the floating sidebar on bottom)
-> Screenshot:
-<img src="../astro-modal/src/assets/images/demo_astro_modal.png" alt="Demo Screenshot">
-
-> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ##  ¡Chao pescao! 👋 🐠

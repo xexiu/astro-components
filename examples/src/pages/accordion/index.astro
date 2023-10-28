@@ -1,0 +1,19 @@
+---
+import Accordion from '@xexiu/astro-accordion';
+
+const content = [
+   'Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro <a href="#focusable">focusable link for test</a> consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.',
+   'Hae duae <a href="#focusable">focusable link for test</a> provinciaebello quondam piratico catervis mixtae praedonum a Servilio proconsule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.',
+   'Content 3'
+];
+---
+
+<Accordion
+   titles={[
+      'Accordion heading 1',
+      'Accordion heading 2',
+      'Accordion heading 3'
+   ]}
+   content={content}
+   isExpanded={[true, false, false]}
+/>

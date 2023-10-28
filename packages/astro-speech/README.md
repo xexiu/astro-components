@@ -16,6 +16,8 @@
 ---
 > Forking and giving a star will contribute to my motivation in making components for astro (react, react-native, etc...) that are purely HTML, CSS, SEO friendly and responsive :) (almost all components :P).
 ---
+> **DEMO**: [Astro Article Specch](https://xexiu.dev/demos/astro/article-speech)
+> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ## Tutorials Roadmap
 
@@ -124,7 +126,5 @@ const blogs = {
 ```
 
 ---
-> Demo: <https://xexiu.dev/blog> (open an article and click the listen icon from the fixed bottom bar)
-> This product is actively mantained. Any PR, issues or whatever concern, please visit the Github repository <https://github.com/xexiu/astro-components>.
 
 ##  ¡Chao pescao! 👋 🐠

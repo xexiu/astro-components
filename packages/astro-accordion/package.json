@@ -1,0 +1,54 @@
+{
+  "author": {
+    "name": "Sergiu Mironescu <sergiu.mironescu@gmail.com>",
+    "url": "https://twitter.com/xexiudev"
+  },
+  "bugs": {
+    "url": "https://github.com/xexiu/astro-components/issues"
+  },
+  "description": "Astro Accordion - HTML, CSS and a bit of javascript made with Custom Elements accordion for Astro.",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "src/*"
+  ],
+  "homepage": "https://xexiu.dev",
+  "keywords": [
+    "astro",
+    "astro-component",
+    "accordion",
+    "optimization",
+    "html5 semantic",
+    "semantic",
+    "SEO",
+    "responsive",
+    "lighthouse",
+    "Browsers API",
+    "Web/mobile compatible",
+    "optimization",
+    "ui",
+    "html",
+    "css",
+    "accesibility",
+    "aria"
+  ],
+  "license": "ISC",
+  "main": "index.ts",
+  "name": "@xexiu/astro-accordion",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "astro-accordion",
+    "type": "git",
+    "url": "https://github.com/xexiu/astro-components"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "tsc": "tsc"
+  },
+  "type": "module",
+  "version": "0.0.1"
+}

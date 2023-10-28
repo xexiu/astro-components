@@ -1,0 +1,137 @@
+---
+interface Props {
+   isExpanded?: boolean[];
+   titles: string[];
+   content: any[];
+   btnClasses?: string;
+   regionClasses?: string;
+}
+const { isExpanded = [], titles = [], content = [], btnClasses = '', regionClasses = '' } = Astro.props;
+---
+
+<xe-accordion>
+   <div class="presentation" role="presentation">
+      {
+         titles.map((title: string, index: number) => {
+            return (
+               <>
+                  <div role="heading">
+                     <button
+                        class:list={['button expandable heading', btnClasses]}
+                        aria-controls={`accordion${index}`}
+                        aria-expanded={isExpanded[index] ? 'true' : 'false'}
+                     >
+                        {title}
+                     </button>
+                  </div>
+                  <div
+                     class:list={['region', regionClasses]}
+                     role="region"
+                     id={`accordion${index}`}
+                     hidden
+                  >
+                     <p>{content[index]}</p>
+                  </div>
+               </>
+            );
+         })
+      }
+   </div>
+</xe-accordion>
+
+<script>
+   class Accordion extends HTMLElement {
+      constructor() {
+         super();
+
+         const btns = this.querySelectorAll(
+            'button[aria-expanded]'
+         ) as NodeListOf<HTMLButtonElement>;
+
+         if (btns && btns.length) {
+            btns.forEach((btn: HTMLButtonElement, index: number) => {
+               const region = this.querySelector(
+                  `#accordion${index}`
+               ) as HTMLElement;
+               const isInitiallyExpanded =
+                  btn.getAttribute('aria-expanded') === 'true';
+
+               btn.addEventListener('click', () =>
+                  this.onButtonClick(btn, region)
+               );
+
+               if (isInitiallyExpanded) {
+                  this.open(btn, region);
+               }
+            });
+         }
+      }
+
+      onButtonClick(btn: HTMLButtonElement, region: HTMLElement) {
+         const open = btn.getAttribute('aria-expanded') === 'true';
+
+         if (open) {
+            return this.close(btn, region);
+         }
+
+         return this.open(btn, region);
+      }
+
+      toggle(open: boolean, btn: HTMLButtonElement, region: HTMLElement) {
+         btn.setAttribute('aria-expanded', `${open}`);
+
+         if (open) {
+            region.removeAttribute('hidden');
+         } else {
+            region.setAttribute('hidden', '');
+         }
+      }
+
+      open(btn: HTMLButtonElement, region: HTMLElement) {
+         this.toggle(true, btn, region);
+      }
+
+      close(btn: HTMLButtonElement, region: HTMLElement) {
+         this.toggle(false, btn, region);
+      }
+   }
+   customElements.define('xe-accordion', Accordion);
+</script>
+
+
+<style>
+   .expandable {
+    position: relative;
+  }
+  .expandable:after {
+    content: "\00a0";
+    display: inline-block;
+    margin-left: 15px;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #004494;
+    border-bottom: 2px solid #004494;
+    transform: rotate(45deg);
+    position: relative;
+    top: 2px;
+    -webkit-transition: all .3s;
+    -moz-transition:    all .3s;
+    -o-transition:      all .3s;
+    -ms-transition:     all .3s;
+    transition:         all .3s;
+  }
+  .expandable[aria-expanded="true"]:after {
+    transform: rotate(-135deg);
+    top: 6px;
+  }
+
+  .button:hover {
+   cursor: pointer;
+  }
+
+  .expandable:active:after,
+  .expandable:focus:after,
+  .expandable:hover:after {
+    border-color: #fff;
+  }
+</style>
