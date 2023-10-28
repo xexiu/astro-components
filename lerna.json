@@ -3,6 +3,7 @@
   "command": {
     "publish": {
       "conventionalCommits": true,
+      "conventionalGraduate": true,
       "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
       "message": "chore: publish release"
     }

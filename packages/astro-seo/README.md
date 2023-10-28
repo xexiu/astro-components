@@ -40,8 +40,6 @@ npm i @xexiu/astro-seo
 
 ## 🔁 API
 
-- Props:
-
 ```javascript
 export type PostDataFeaturedImage = {
    src: string | any;
@@ -77,8 +75,6 @@ interface Props {
    robots: any;
 }
 ```
-
-> Check code for more!
 
 ## 🛠 Usage in astro
 

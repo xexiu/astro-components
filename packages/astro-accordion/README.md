@@ -29,43 +29,52 @@
 - Using bun:
 
 ``` javascript
-bun i @xexiu/astro-progress-bar
+bun i @xexiu/astro-accordion
 ```
 
 - Using npm:
 
 ```javascript
-npm i @xexiu/astro-progress-bar
+npm i @xexiu/astro-accordion
 ```
 
 ## 🔁 API
 
-- Props:
-
 ```javascript
 interface Props {
-    classes?: string; // Optional
-    excludeElementSelector?: string; // Optional
+   isExpanded?: boolean[] // Optional - by default, accordion is not expanded;
+   titles: string[] // Required;
+   content: any[] // Required;
+   btnClasses?: string // Optional;
+   regionClasses?: string // Optional;
 }
 ```
-
-> Check code for more!
 
 ## 🛠 Usage in astro
 
 ```javascript
 ---
-// more personal/code imports
-import ProgressBar from '@xexiu/astro-progress-bar';
+import Accordion from '@xexiu/astro-accordion';
+
+const content = [
+   'Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro <a href="#focusable">focusable link for test</a> consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.',
+   'Hae duae <a href="#focusable">focusable link for test</a> provinciaebello quondam piratico catervis mixtae praedonum a Servilio proconsule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.',
+   'Content 3'
+];
 ---
 
-<div class="container">
-<ProgressBar />
-<p>MY VERY LONG ARTICLE/WHATEVER</p>
-</div>
-```
+<div>titles and content length must match</div>
 
-> If classes are NOT specified, the progress bar has default styles.
+<Accordion
+   titles={[
+      'Accordion heading 1',
+      'Accordion heading 2',
+      'Accordion heading 3'
+   ]}
+   content={content}
+   isExpanded={[true, false, false]}
+/>
+```
 ---
 
 ##  ¡Chao pescao! 👋 🐠

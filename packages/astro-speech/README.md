@@ -40,8 +40,6 @@ npm i @xexiu/astro-speech
 
 ## 🔁 API
 
-- Props:
-
 ```javascript
 interface Props {
   classes?: string; // Optional
@@ -52,8 +50,6 @@ interface Props {
 }
 ```
 
-> Check code for more!
-
 ## 🛠 Usage in astro (client)
 
 ```javascript
@@ -63,12 +59,12 @@ import AstroSpeech from '@xexiu/astro-speech';
 ---
 
 <div class="container">
-    <p class="get-me">Whatever text...</p>
+    <p class="get-me">Whatever text to listen...</p>
 </div>
 
 <AstroSpeech
     text={document.querySelector('.get-me').textContent}
-    btnText="Escuchar"
+    btnText="Listen to article"
 />
 ```
 
@@ -121,7 +117,7 @@ const blogs = {
 
 <AstroSpeech
     text={blogs.latest[0].body}
-    btnText="Escuchar"
+    btnText="Listen to article"
 />
 ```
 

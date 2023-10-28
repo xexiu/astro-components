@@ -40,8 +40,6 @@ npm i @xexiu/astro-tabs
 
 ## 🔁 API
 
-- Props:
-
 ```javascript
 export interface Props {
     tabTitles: string[]; // Required array
@@ -54,8 +52,6 @@ export interface Props {
 }
 ```
 
-> Check code for more!
-
 ## 🛠 Usage in astro
 
 ```javascript
@@ -65,11 +61,11 @@ const blogs = {
         title: "Test 1",
     }],
     pinned: [{
-        id: 1,
+        id: 2,
         title: "Test 2",
     }],
     private: [{
-        id: 1,
+        id: 3,
         title: "Test 3",
     }]
 }
@@ -86,7 +82,8 @@ const keys = Object.keys(blogs); // ['latest', 'pinned', 'private']
         (key: string) => {
             return (
                 <Fragment>
-                    <Posts entries={blogs[key]} /> // blog['latest'] and so on (map internally over keys)
+                    <div>{blogs[key].id}</div> // 1, 2, 3
+                    <div>{blogs[key].title}</div> // Test 1, Test 2, Test 3
                 </Fragment>
             );
         }

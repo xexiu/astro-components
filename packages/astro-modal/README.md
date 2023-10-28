@@ -40,8 +40,6 @@ npm i @xexiu/astro-modal
 
 ## 🔁 API
 
-- Props:
-
 ```javascript
 export interface Props {
     id: string; // Required string
@@ -55,21 +53,7 @@ export interface Props {
     closeBtnClass?: string; // Optional
     btnText?: string; // Optional (if NOT Provided a close mark (X) will show on pop-up modal)
 }
-
-<header class:list={['modal-header', headerClass]}>
-    <slot name="modal-title" />
-</header>
-
-<section class:list={['modal-section', sectionClass]}>
-    <slot name="modal-main" />
-</section>
-
-<footer class:list={['modal-footer', footerClass]}>
-    <slot name="modal-footer" />
-</footer>
 ```
-
-> Check code for more!
 
 ## 🛠 Usage in astro
 
@@ -80,10 +64,22 @@ import Modal from '@xexiu/astro-modal';
 ---
 
 <div>Whatever text/html</div>
-<Modal id="__plainIdString__" ariaLabel="__labelString__" modalBtnClass="__bntClassString__" btnCloseAriaLabel="__labelString__">
-    <SocialShareTitle slot="modal-title" {...props} />
-    <SocialShareOptions slot="modal-main" {...props} />
-    <SocialShareFooter slot="modal-footer" {...props} />
+
+<Modal id="myAwsomeModal" ariaLabel="Share on social" btnCloseAriaLabel="Close Modal">
+    <div slot="open-modal-button">Open Modal</div>
+
+    <h2 slot="modal-title">Modal Title</h2>
+
+    <div slot="modal-main">
+        <h4>Modal Main</h4>
+        <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nesciunt
+    placeat officia, aliquid enim corrupti error repellat iusto corporis
+    commodi ad natus ratione aut iure nisi deserunt soluta quam iste!
+        </p>
+    </div>
+
+    <div slot="modal-footer">Modal Footer</div>
 </Modal>
 ```
 

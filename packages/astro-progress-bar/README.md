@@ -41,16 +41,12 @@ npm i @xexiu/astro-progress-bar
 
 ## 🔁 API
 
-- Props:
-
 ```javascript
 interface Props {
     classes?: string; // Optional
     excludeElementSelector?: string; // Optional
 }
 ```
-
-> Check code for more!
 
 ## 🛠 Usage in astro
 
