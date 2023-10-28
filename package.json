@@ -24,8 +24,8 @@
   },
   "scripts": {
     "lint:fix": "bun run eslint --fix --ext .js,.jsx,.ts,.astro .",
-    "publish": "bun lerna publish --conventional-commits --conventional-graduate --yes",
-    "publish:force": "bun lerna publish --conventional-commits --conventional-graduate --yes --force-publish '*'",
+    "publish": "bun lerna publish --conventional-commits --conventional-graduate",
+    "publish:force": "bun lerna publish --conventional-commits --conventional-graduate --force-publish '*'",
     "release": "bun lerna publish from-git",
     "test": "echo \"Skipping: no pre-commit test specified\" && exit 0"
   },
