@@ -14,7 +14,7 @@
     "index.ts",
     "src/*"
   ],
-  "gitHead": "86c1d5b400575a342757845ede9a44d1094691cb",
+  "gitHead": "fb20f48f0973bd14334724477a27166cb21aff84",
   "homepage": "https://xexiu.dev",
   "keywords": [
     "astro",
