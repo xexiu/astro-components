@@ -1,4 +1,5 @@
 ---
+import MainLayout from '@layouts/MainLayout.astro';
 import Accordion from '@xexiu/astro-accordion';
 
 const content = [
@@ -7,13 +8,31 @@ const content = [
    'Content 3'
 ];
 ---
+<MainLayout>
+   <div class="with-expand">With Expand</div>
+   <Accordion
+      titles={[
+         'Accordion heading 1',
+         'Accordion heading 2',
+         'Accordion heading 3'
+      ]}
+      content={content}
+      isExpanded={[true, false, false]}
+   />
+   <hr />
+   <div class="without-expand">Without Expand</div>
+   <Accordion
+      titles={[
+         'Accordion heading 1',
+         'Accordion heading 2',
+         'Accordion heading 3'
+      ]}
+      content={content}
+   />
+</MainLayout>
 
-<Accordion
-   titles={[
-      'Accordion heading 1',
-      'Accordion heading 2',
-      'Accordion heading 3'
-   ]}
-   content={content}
-   isExpanded={[true, false, false]}
-/>
+<style is:inline>
+   [role="heading"] {
+      margin-bottom: 5px;
+   }
+</style>

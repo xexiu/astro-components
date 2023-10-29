@@ -13,12 +13,14 @@ const { isExpanded = [], titles = [], content = [], btnClasses = '', regionClass
    <div class="presentation" role="presentation">
       {
          titles.map((title: string, index: number) => {
+            const randomId = Math.floor(Math.random() * 9999);
+
             return (
                <>
-                  <div role="heading">
+                  <div role="heading" aria-level="2">
                      <button
                         class:list={['button expandable heading', btnClasses]}
-                        aria-controls={`accordion${index}`}
+                        aria-controls={`accordion${randomId}`}
                         aria-expanded={isExpanded[index] ? 'true' : 'false'}
                      >
                         {title}
@@ -27,7 +29,7 @@ const { isExpanded = [], titles = [], content = [], btnClasses = '', regionClass
                   <div
                      class:list={['region', regionClasses]}
                      role="region"
-                     id={`accordion${index}`}
+                     id={`accordion${randomId}`}
                      hidden
                   >
                      <p>{content[index]}</p>
@@ -49,10 +51,8 @@ const { isExpanded = [], titles = [], content = [], btnClasses = '', regionClass
          ) as NodeListOf<HTMLButtonElement>;
 
          if (btns && btns.length) {
-            btns.forEach((btn: HTMLButtonElement, index: number) => {
-               const region = this.querySelector(
-                  `#accordion${index}`
-               ) as HTMLElement;
+            btns.forEach((btn: HTMLButtonElement) => {
+               const region = this.querySelector(`#${btn.getAttribute('aria-controls')}`) as HTMLElement;
                const isInitiallyExpanded =
                   btn.getAttribute('aria-expanded') === 'true';
 
@@ -132,6 +132,6 @@ const { isExpanded = [], titles = [], content = [], btnClasses = '', regionClass
   .expandable:active:after,
   .expandable:focus:after,
   .expandable:hover:after {
-    border-color: #fff;
+   border-color: #222;
   }
 </style>
