@@ -29,11 +29,7 @@ Independent astro components made with love. **Pure HTML, CSS, SEO friendly, Lig
 - [X] Astro Speech (html, css, js, attrs...)
 - [ ] Astro Tooltip (placements, attrs...)
 - [ ] Astro Link (internal, external, tel, email, attrs...)
-- [ ] Astro Search Bar (responsive, simple, attrs...)
 - [X] Astro SEO (JSON-LD Generator JS, metas, attrs...)
-- [ ] Astro Custom Components JS (custom components register js, attrs...)
 - [X] Astro Accordion (pure html, css, attrs...)
-- [ ] Astro Dropdown (pure html, css, attrs...)
-- [ ] Astro Expandable (pure html, css, attrs...)
 
 More to come!
