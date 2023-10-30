@@ -8,6 +8,13 @@
       "message": "chore: publish release"
     }
   },
+  "ignoreChanges": [
+    "**/CHANGELOG.md",
+    "**/node_modules/**",
+    "**/package.json",
+    "**/*.md",
+    "**/perf/**"
+  ],
   "packages": [
     "packages/*"
   ],
