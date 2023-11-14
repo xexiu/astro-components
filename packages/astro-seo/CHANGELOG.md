@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/xexiu/astro-components/compare/@xexiu/astro-seo@0.1.10...@xexiu/astro-seo@0.2.0) (2023-11-14)
+
+
+### Features
+
+* **astro-seo:** Add twitter:creator meta tag and update og:image tags ([a2537d0](https://github.com/xexiu/astro-components/commit/a2537d0afbd160acce830847e70ed92f1d86aeac))
+
+
+
+
+
 ## [0.1.10](https://github.com/xexiu/astro-components/compare/@xexiu/astro-seo@0.1.9...@xexiu/astro-seo@0.1.10) (2023-11-14)
 
 **Note:** Version bump only for package @xexiu/astro-seo
