@@ -43,10 +43,10 @@ npm i @xexiu/astro-seo
 ```javascript
 export type PostDataFeaturedImage = {
    src: string | any;
-   width: number;
-   height: number;
-   format: string;
-   orientation: string;
+   width?: number;
+   height?: number;
+   format?: string;
+   orientation?: string;
    alt: string;
 }
 
