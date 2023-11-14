@@ -21,7 +21,7 @@ function readingTime(text: string): { time: number; wordCount: number } {
    };
 }
 
-export default function jsonLDGenerator({ type, post, url, defaultSchema }) {
+export function jsonLDGenerator({ type, post, url, defaultSchema }) {
    const copyright = new Date().getFullYear().toString();
 
    if (type === 'post') {
@@ -62,4 +62,12 @@ export default function jsonLDGenerator({ type, post, url, defaultSchema }) {
       "url": "${import.meta.env.SITE}"
       }
     </script>`;
+}
+
+export function getTwitterName(twitterName: string, defaultSchema: any) {
+   if(twitterName) {
+      return twitterName.startsWith('@') ? twitterName : `@${twitterName}`;
+   }
+
+   return defaultSchema.twitter_name || '';
 }

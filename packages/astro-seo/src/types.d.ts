@@ -1,5 +1,9 @@
 export type PostDataFeaturedImage = {
     src: string | any;
+    width: number;
+    height: number;
+    format: string;
+    orientation: string;
     alt: string;
  }
 
@@ -13,6 +17,7 @@ export type PostData = {
     featured_post?: boolean;
     is_private?: boolean;
     featured_image: PostDataFeaturedImage;
+    twitter_name?: string;
  }
 
 export type Post = {

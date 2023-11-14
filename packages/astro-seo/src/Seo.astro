@@ -1,6 +1,6 @@
 ---
 import type { Post, PostDataFeaturedImage } from './types';
-import jsonLDGenerator from './utils/helpers';
+import { jsonLDGenerator, getTwitterName } from './utils/helpers';
 
 interface Props {
   title: string;
@@ -23,6 +23,11 @@ const {
 } = Astro.props;
 
 const featuredImg = featured_image?.src;
+const imageType = featured_image?.format ? `image/${featuredImg.format}` : 'image/png';
+const imageWidth = featured_image?.width ? String(featuredImg.width) : '1200';
+const imageHeight = featured_image?.height ? String(featuredImg.height) : '600';
+const twitterName = getTwitterName(frontmatter?.data?.twitter_name as string, defaultSchema);
+
 
 const jsonLD = jsonLDGenerator({
    type: frontmatter ? 'post' : 'website',
@@ -58,9 +63,9 @@ const jsonLD = jsonLDGenerator({
       featuredImg?.src || defaultSchema.featured_image.src
    }`}
 />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="600" />
+<meta property="og:image:type" content={imageType} />
+<meta property="og:image:width" content={imageWidth} />
+<meta property="og:image:height" content={imageHeight} />
 <meta
    property="og:image:alt"
    content={featured_image?.alt || defaultSchema.featured_image.alt}
@@ -70,6 +75,7 @@ const jsonLD = jsonLDGenerator({
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content={twitterName} />
 <meta
    name="twitter:image"
    content={`${import.meta.env.SITE}${
@@ -82,6 +88,8 @@ const jsonLD = jsonLDGenerator({
       featuredImg?.src || defaultSchema.featured_image.src
    }`}
 />
+<meta name="twitter:image:width" content={imageWidth} />
+<meta name="twitter:image:height" content={imageHeight} />
 <meta name="twitter:image:alt" content={title} />
 <meta name="twitter:domain" content={import.meta.env.SITE} />
 {robots && <meta name="robots" content="noindex" />}
