@@ -43,6 +43,10 @@ npm i @xexiu/astro-seo
 ```javascript
 export type PostDataFeaturedImage = {
    src: string | any;
+   width: number;
+   height: number;
+   format: string;
+   orientation: string;
    alt: string;
 }
 
@@ -56,6 +60,7 @@ export type PostData = {
    featured_post?: boolean;
    is_private?: boolean;
    featured_image: PostDataFeaturedImage;
+   twitter_name?: string;
 }
 
 export type Post = {
@@ -89,7 +94,8 @@ const defaultSchema = {
         "alt": "Bienvenid@ a mi blog de desarrollo Full Stack - Sergiu Mironescu",
         "src": "/image-default.png"
     },
-    "title": "Bienvenid@ a mi blog de desarrollo Full Stack - Sergiu Mironescu"
+    "title": "Bienvenid@ a mi blog de desarrollo Full Stack - Sergiu Mironescu",
+    "twitter_name": "@whats_up"
 };
 
 const {
