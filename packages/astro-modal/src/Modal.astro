@@ -53,7 +53,7 @@ if (!isPlainString(id)) {
    </footer>
    <form method="dialog">
       <slot name="modal-close-button" />
-      <button aria-controls={id} class:list={['close-btn-modal', closeBtnClass]} aria-label={btnCloseAriaLabel}>
+      <button type="button" aria-controls={id} class:list={['close-btn-modal', closeBtnClass]} aria-label={btnCloseAriaLabel}>
          {btnText ? <span>{btnText}</span> :  <img
             src={iconSvg.src}
             alt="Cerrar Modal Icono"
